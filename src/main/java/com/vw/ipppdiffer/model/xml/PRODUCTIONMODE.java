@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for PRODUCTION-MODE complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="PRODUCTION-MODE"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PRODUCTION-MODE", propOrder = {
@@ -54,11 +54,11 @@ public class PRODUCTIONMODE
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -66,11 +66,11 @@ public class PRODUCTIONMODE
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -78,11 +78,11 @@ public class PRODUCTIONMODE
 
     /**
      * Gets the value of the bytes property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BYTES }
-     *     
+     *
      */
     public BYTES getBYTES() {
         return bytes;
@@ -90,11 +90,11 @@ public class PRODUCTIONMODE
 
     /**
      * Sets the value of the bytes property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BYTES }
-     *     
+     *
      */
     public void setBYTES(BYTES value) {
         this.bytes = value;
@@ -102,11 +102,11 @@ public class PRODUCTIONMODE
 
     /**
      * Gets the value of the variants property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public VARIANTS getVARIANTS() {
         return variants;
@@ -114,11 +114,11 @@ public class PRODUCTIONMODE
 
     /**
      * Sets the value of the variants property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public void setVARIANTS(VARIANTS value) {
         this.variants = value;

@@ -17,9 +17,9 @@ import java.math.BigDecimal;
 
 /**
  * <p>Java class for TOLERANCE complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="TOLERANCE"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import java.math.BigDecimal;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TOLERANCE", propOrder = {
@@ -49,11 +49,11 @@ public class TOLERANCE {
 
     /**
      * Gets the value of the minvalue property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getMINVALUE() {
         return minvalue;
@@ -61,11 +61,11 @@ public class TOLERANCE {
 
     /**
      * Sets the value of the minvalue property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setMINVALUE(BigDecimal value) {
         this.minvalue = value;
@@ -73,11 +73,11 @@ public class TOLERANCE {
 
     /**
      * Gets the value of the maxvalue property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getMAXVALUE() {
         return maxvalue;
@@ -85,11 +85,11 @@ public class TOLERANCE {
 
     /**
      * Sets the value of the maxvalue property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setMAXVALUE(BigDecimal value) {
         this.maxvalue = value;

@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for IMPORT-ELEMENT complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IMPORT-ELEMENT"&gt;
  *   &lt;complexContent&gt;
@@ -30,8 +30,8 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IMPORT-ELEMENT", propOrder = {
@@ -53,11 +53,11 @@ public class IMPORTELEMENT
 
     /**
      * Gets the value of the additionalname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getADDITIONALNAME() {
         return additionalname;
@@ -65,11 +65,11 @@ public class IMPORTELEMENT
 
     /**
      * Sets the value of the additionalname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setADDITIONALNAME(String value) {
         this.additionalname = value;
@@ -77,11 +77,11 @@ public class IMPORTELEMENT
 
     /**
      * Gets the value of the additionalnameen property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getADDITIONALNAMEEN() {
         return additionalnameen;
@@ -89,11 +89,11 @@ public class IMPORTELEMENT
 
     /**
      * Sets the value of the additionalnameen property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setADDITIONALNAMEEN(String value) {
         this.additionalnameen = value;
@@ -101,11 +101,11 @@ public class IMPORTELEMENT
 
     /**
      * Gets the value of the importId property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getImportId() {
         return importId;
@@ -113,11 +113,11 @@ public class IMPORTELEMENT
 
     /**
      * Sets the value of the importId property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setImportId(String value) {
         this.importId = value;
@@ -125,11 +125,11 @@ public class IMPORTELEMENT
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPath() {
         return path;
@@ -137,11 +137,11 @@ public class IMPORTELEMENT
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPath(String value) {
         this.path = value;

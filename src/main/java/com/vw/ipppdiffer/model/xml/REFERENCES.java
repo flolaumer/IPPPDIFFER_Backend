@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for REFERENCES complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="REFERENCES"&gt;
  *   &lt;complexContent&gt;
@@ -31,8 +31,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "REFERENCES", propOrder = {
@@ -48,11 +48,11 @@ public class REFERENCES {
 
     /**
      * Gets the value of the regulations property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link REGULATIONS }
-     *     
+     *
      */
     public REGULATIONS getREGULATIONS() {
         return regulations;
@@ -60,11 +60,11 @@ public class REFERENCES {
 
     /**
      * Sets the value of the regulations property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link REGULATIONS }
-     *     
+     *
      */
     public void setREGULATIONS(REGULATIONS value) {
         this.regulations = value;
@@ -72,11 +72,11 @@ public class REFERENCES {
 
     /**
      * Gets the value of the relateddocuments property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link RELATEDDOCUMENTS }
-     *     
+     *
      */
     public RELATEDDOCUMENTS getRELATEDDOCUMENTS() {
         return relateddocuments;
@@ -84,11 +84,11 @@ public class REFERENCES {
 
     /**
      * Sets the value of the relateddocuments property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link RELATEDDOCUMENTS }
-     *     
+     *
      */
     public void setRELATEDDOCUMENTS(RELATEDDOCUMENTS value) {
         this.relateddocuments = value;

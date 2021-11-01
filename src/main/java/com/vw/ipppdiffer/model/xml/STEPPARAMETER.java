@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for STEP-PARAMETER complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="STEP-PARAMETER"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "STEP-PARAMETER", propOrder = {
@@ -68,11 +68,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the key property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getKEY() {
         return key;
@@ -80,11 +80,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the key property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setKEY(String value) {
         this.key = value;
@@ -92,11 +92,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -104,11 +104,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -116,11 +116,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the datatype property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDATATYPE() {
         return datatype;
@@ -128,11 +128,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the datatype property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDATATYPE(String value) {
         this.datatype = value;
@@ -140,11 +140,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the valueproxy property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public VALUEPROXY getVALUEPROXY() {
         return valueproxy;
@@ -152,11 +152,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the valueproxy property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public void setVALUEPROXY(VALUEPROXY value) {
         this.valueproxy = value;
@@ -164,11 +164,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the default property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDEFAULT() {
         return _default;
@@ -176,11 +176,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the default property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDEFAULT(String value) {
         this._default = value;
@@ -188,11 +188,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPath() {
         return path;
@@ -200,11 +200,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPath(String value) {
         this.path = value;
@@ -212,11 +212,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the type property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link HMIPARAMETERTYPE }
-     *     
+     *
      */
     public HMIPARAMETERTYPE getType() {
         return type;
@@ -224,11 +224,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the type property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link HMIPARAMETERTYPE }
-     *     
+     *
      */
     public void setType(HMIPARAMETERTYPE value) {
         this.type = value;
@@ -236,11 +236,11 @@ public class STEPPARAMETER
 
     /**
      * Gets the value of the optional property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isOptional() {
         if (optional == null) {
@@ -252,11 +252,11 @@ public class STEPPARAMETER
 
     /**
      * Sets the value of the optional property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setOptional(Boolean value) {
         this.optional = value;

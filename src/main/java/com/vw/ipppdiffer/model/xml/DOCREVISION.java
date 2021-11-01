@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DOC-REVISION complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DOC-REVISION"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DOC-REVISION", propOrder = {
@@ -60,11 +60,11 @@ public class DOCREVISION {
 
     /**
      * Gets the value of the version property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVERSION() {
         return version;
@@ -72,11 +72,11 @@ public class DOCREVISION {
 
     /**
      * Sets the value of the version property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVERSION(String value) {
         this.version = value;
@@ -84,11 +84,11 @@ public class DOCREVISION {
 
     /**
      * Gets the value of the date property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDATE() {
         return date;
@@ -96,11 +96,11 @@ public class DOCREVISION {
 
     /**
      * Sets the value of the date property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDATE(String value) {
         this.date = value;
@@ -108,11 +108,11 @@ public class DOCREVISION {
 
     /**
      * Gets the value of the authorref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public REFERENCE getAUTHORREF() {
         return authorref;
@@ -120,11 +120,11 @@ public class DOCREVISION {
 
     /**
      * Sets the value of the authorref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public void setAUTHORREF(REFERENCE value) {
         this.authorref = value;
@@ -132,11 +132,11 @@ public class DOCREVISION {
 
     /**
      * Gets the value of the change property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCHANGE() {
         return change;
@@ -144,11 +144,11 @@ public class DOCREVISION {
 
     /**
      * Sets the value of the change property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCHANGE(String value) {
         this.change = value;
@@ -156,11 +156,11 @@ public class DOCREVISION {
 
     /**
      * Gets the value of the tool property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTOOL() {
         return tool;
@@ -168,11 +168,11 @@ public class DOCREVISION {
 
     /**
      * Sets the value of the tool property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTOOL(String value) {
         this.tool = value;

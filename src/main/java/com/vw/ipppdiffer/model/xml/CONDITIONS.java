@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for CONDITIONS complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="CONDITIONS"&gt;
  *   &lt;complexContent&gt;
@@ -35,8 +35,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CONDITIONS", propOrder = {
@@ -64,11 +64,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the buildupconditions property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getBUILDUPCONDITIONS() {
         return buildupconditions;
@@ -76,11 +76,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the buildupconditions property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setBUILDUPCONDITIONS(String value) {
         this.buildupconditions = value;
@@ -88,11 +88,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the generalconditions property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getGENERALCONDITIONS() {
         return generalconditions;
@@ -100,11 +100,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the generalconditions property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setGENERALCONDITIONS(String value) {
         this.generalconditions = value;
@@ -112,11 +112,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the dependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDEPENDENCIES() {
         return dependencies;
@@ -124,11 +124,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the dependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDEPENDENCIES(String value) {
         this.dependencies = value;
@@ -136,11 +136,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the ressources property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getRESSOURCES() {
         return ressources;
@@ -148,11 +148,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the ressources property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setRESSOURCES(String value) {
         this.ressources = value;
@@ -160,11 +160,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the miscellaneous property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMISCELLANEOUS() {
         return miscellaneous;
@@ -172,11 +172,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the miscellaneous property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMISCELLANEOUS(String value) {
         this.miscellaneous = value;
@@ -184,11 +184,11 @@ public class CONDITIONS {
 
     /**
      * Gets the value of the manualoperations property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isMANUALOPERATIONS() {
         return manualoperations;
@@ -196,11 +196,11 @@ public class CONDITIONS {
 
     /**
      * Sets the value of the manualoperations property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setMANUALOPERATIONS(Boolean value) {
         this.manualoperations = value;

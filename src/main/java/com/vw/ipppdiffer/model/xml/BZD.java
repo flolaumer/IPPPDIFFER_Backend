@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for BZD complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="BZD"&gt;
  *   &lt;complexContent&gt;
@@ -33,15 +33,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BZD", propOrder = {
-    "s42ATTRIBUTESADDED",
-    "targetdate",
-    "idents",
-    "additionalidents"
+        "s42ATTRIBUTESADDED",
+        "targetdate",
+        "idents",
+        "additionalidents"
 })
 public class BZD {
 
@@ -56,11 +54,9 @@ public class BZD {
 
     /**
      * Gets the value of the s42ATTRIBUTESADDED property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isS42ATTRIBUTESADDED() {
         return s42ATTRIBUTESADDED;
@@ -68,11 +64,9 @@ public class BZD {
 
     /**
      * Sets the value of the s42ATTRIBUTESADDED property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setS42ATTRIBUTESADDED(Boolean value) {
         this.s42ATTRIBUTESADDED = value;
@@ -80,11 +74,9 @@ public class BZD {
 
     /**
      * Gets the value of the targetdate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTARGETDATE() {
         return targetdate;
@@ -92,11 +84,9 @@ public class BZD {
 
     /**
      * Sets the value of the targetdate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTARGETDATE(String value) {
         this.targetdate = value;
@@ -104,11 +94,9 @@ public class BZD {
 
     /**
      * Gets the value of the idents property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link IDENTS }
-     *     
+     *
+     * @return possible object is
+     * {@link IDENTS }
      */
     public IDENTS getIDENTS() {
         return idents;
@@ -116,11 +104,9 @@ public class BZD {
 
     /**
      * Sets the value of the idents property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link IDENTS }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link IDENTS }
      */
     public void setIDENTS(IDENTS value) {
         this.idents = value;
@@ -128,11 +114,9 @@ public class BZD {
 
     /**
      * Gets the value of the additionalidents property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link IDENTS }
-     *     
+     *
+     * @return possible object is
+     * {@link IDENTS }
      */
     public IDENTS getADDITIONALIDENTS() {
         return additionalidents;
@@ -140,11 +124,9 @@ public class BZD {
 
     /**
      * Sets the value of the additionalidents property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link IDENTS }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link IDENTS }
      */
     public void setADDITIONALIDENTS(IDENTS value) {
         this.additionalidents = value;

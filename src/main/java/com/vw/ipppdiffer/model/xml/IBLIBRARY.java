@@ -15,9 +15,9 @@ import java.util.List;
 
 /**
  * <p>Java class for IB-LIBRARY complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IB-LIBRARY"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import java.util.List;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IB-LIBRARY", propOrder = {
@@ -56,11 +56,11 @@ public class IBLIBRARY
 
     /**
      * Gets the value of the releasedate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getRELEASEDATE() {
         return releasedate;
@@ -68,11 +68,11 @@ public class IBLIBRARY
 
     /**
      * Sets the value of the releasedate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setRELEASEDATE(String value) {
         this.releasedate = value;
@@ -80,11 +80,11 @@ public class IBLIBRARY
 
     /**
      * Gets the value of the docinfo property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DOCUMENTINFO }
-     *     
+     *
      */
     public DOCUMENTINFO getDOCINFO() {
         return docinfo;
@@ -92,11 +92,11 @@ public class IBLIBRARY
 
     /**
      * Sets the value of the docinfo property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DOCUMENTINFO }
-     *     
+     *
      */
     public void setDOCINFO(DOCUMENTINFO value) {
         this.docinfo = value;
@@ -104,25 +104,25 @@ public class IBLIBRARY
 
     /**
      * Gets the value of the block property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the block property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBLOCK().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BLOCK }
-     * 
-     * 
+     *
+     *
      */
     public List<BLOCK> getBLOCK() {
         if (block == null) {
@@ -133,11 +133,11 @@ public class IBLIBRARY
 
     /**
      * Gets the value of the version property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVersion() {
         return version;
@@ -145,11 +145,11 @@ public class IBLIBRARY
 
     /**
      * Sets the value of the version property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVersion(String value) {
         this.version = value;

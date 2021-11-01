@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for TIME-PARAMETER complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="TIME-PARAMETER"&gt;
  *   &lt;complexContent&gt;
@@ -31,8 +31,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TIME-PARAMETER", propOrder = {
@@ -48,11 +48,11 @@ public class TIMEPARAMETER {
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -60,11 +60,11 @@ public class TIMEPARAMETER {
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -72,11 +72,11 @@ public class TIMEPARAMETER {
 
     /**
      * Gets the value of the valueproxy property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public VALUEPROXY getVALUEPROXY() {
         return valueproxy;
@@ -84,11 +84,11 @@ public class TIMEPARAMETER {
 
     /**
      * Sets the value of the valueproxy property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public void setVALUEPROXY(VALUEPROXY value) {
         this.valueproxy = value;

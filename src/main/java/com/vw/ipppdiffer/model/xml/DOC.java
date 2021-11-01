@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DOC complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DOC"&gt;
  *   &lt;complexContent&gt;
@@ -35,17 +35,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DOC", propOrder = {
-    "name",
-    "version",
-    "desc",
-    "filesystem",
-    "url",
-    "sparepartnumber"
+        "name",
+        "version",
+        "desc",
+        "filesystem",
+        "url",
+        "sparepartnumber"
 })
 public class DOC {
 
@@ -64,11 +62,9 @@ public class DOC {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNAME() {
         return name;
@@ -76,11 +72,9 @@ public class DOC {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNAME(String value) {
         this.name = value;
@@ -88,11 +82,9 @@ public class DOC {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVERSION() {
         return version;
@@ -100,11 +92,9 @@ public class DOC {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVERSION(String value) {
         this.version = value;
@@ -112,11 +102,9 @@ public class DOC {
 
     /**
      * Gets the value of the desc property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDESC() {
         return desc;
@@ -124,11 +112,9 @@ public class DOC {
 
     /**
      * Sets the value of the desc property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -136,11 +122,9 @@ public class DOC {
 
     /**
      * Gets the value of the filesystem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFILESYSTEM() {
         return filesystem;
@@ -148,11 +132,9 @@ public class DOC {
 
     /**
      * Sets the value of the filesystem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFILESYSTEM(String value) {
         this.filesystem = value;
@@ -160,11 +142,9 @@ public class DOC {
 
     /**
      * Gets the value of the url property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getURL() {
         return url;
@@ -172,11 +152,9 @@ public class DOC {
 
     /**
      * Sets the value of the url property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setURL(String value) {
         this.url = value;
@@ -184,11 +162,9 @@ public class DOC {
 
     /**
      * Gets the value of the sparepartnumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSPAREPARTNUMBER() {
         return sparepartnumber;
@@ -196,11 +172,9 @@ public class DOC {
 
     /**
      * Sets the value of the sparepartnumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSPAREPARTNUMBER(String value) {
         this.sparepartnumber = value;

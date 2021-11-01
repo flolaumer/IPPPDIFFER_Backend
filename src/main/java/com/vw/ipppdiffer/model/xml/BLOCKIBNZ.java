@@ -17,9 +17,9 @@ import java.math.BigDecimal;
 
 /**
  * <p>Java class for BLOCK-IBNZ complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="BLOCK-IBNZ"&gt;
  *   &lt;complexContent&gt;
@@ -33,8 +33,8 @@ import java.math.BigDecimal;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BLOCK-IBNZ", propOrder = {
@@ -53,11 +53,11 @@ public class BLOCKIBNZ {
 
     /**
      * Gets the value of the vsi property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getVSI() {
         return vsi;
@@ -65,11 +65,11 @@ public class BLOCKIBNZ {
 
     /**
      * Sets the value of the vsi property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setVSI(BigDecimal value) {
         this.vsi = value;
@@ -77,11 +77,11 @@ public class BLOCKIBNZ {
 
     /**
      * Gets the value of the vsiverified property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getVSIVERIFIED() {
         return vsiverified;
@@ -89,11 +89,11 @@ public class BLOCKIBNZ {
 
     /**
      * Sets the value of the vsiverified property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setVSIVERIFIED(BigDecimal value) {
         this.vsiverified = value;
@@ -101,11 +101,11 @@ public class BLOCKIBNZ {
 
     /**
      * Gets the value of the series property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getSERIES() {
         return series;
@@ -113,11 +113,11 @@ public class BLOCKIBNZ {
 
     /**
      * Sets the value of the series property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setSERIES(BigDecimal value) {
         this.series = value;

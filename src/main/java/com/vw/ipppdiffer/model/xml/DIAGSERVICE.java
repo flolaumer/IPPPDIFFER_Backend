@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DIAG-SERVICE complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DIAG-SERVICE"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DIAG-SERVICE", propOrder = {
@@ -52,11 +52,11 @@ public class DIAGSERVICE {
 
     /**
      * Gets the value of the serviceidentifier property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSERVICEIDENTIFIER() {
         return serviceidentifier;
@@ -64,11 +64,11 @@ public class DIAGSERVICE {
 
     /**
      * Sets the value of the serviceidentifier property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSERVICEIDENTIFIER(String value) {
         this.serviceidentifier = value;
@@ -76,11 +76,11 @@ public class DIAGSERVICE {
 
     /**
      * Gets the value of the longname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLONGNAME() {
         return longname;
@@ -88,11 +88,11 @@ public class DIAGSERVICE {
 
     /**
      * Sets the value of the longname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLONGNAME(String value) {
         this.longname = value;
@@ -100,11 +100,11 @@ public class DIAGSERVICE {
 
     /**
      * Gets the value of the shortname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSHORTNAME() {
         return shortname;
@@ -112,11 +112,11 @@ public class DIAGSERVICE {
 
     /**
      * Sets the value of the shortname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSHORTNAME(String value) {
         this.shortname = value;

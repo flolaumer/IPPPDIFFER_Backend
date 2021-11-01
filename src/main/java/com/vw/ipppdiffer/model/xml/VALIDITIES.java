@@ -16,9 +16,9 @@ import java.util.List;
 
 /**
  * <p>Java class for VALIDITIES complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="VALIDITIES"&gt;
  *   &lt;complexContent&gt;
@@ -31,8 +31,8 @@ import java.util.List;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VALIDITIES", propOrder = {
@@ -48,25 +48,25 @@ public class VALIDITIES {
 
     /**
      * Gets the value of the validity property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the validity property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVALIDITY().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VALIDITY }
-     * 
-     * 
+     *
+     *
      */
     public List<VALIDITY> getVALIDITY() {
         if (validity == null) {
@@ -77,11 +77,11 @@ public class VALIDITIES {
 
     /**
      * Gets the value of the exporttime property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getExporttime() {
         return exporttime;
@@ -89,11 +89,11 @@ public class VALIDITIES {
 
     /**
      * Sets the value of the exporttime property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setExporttime(XMLGregorianCalendar value) {
         this.exporttime = value;

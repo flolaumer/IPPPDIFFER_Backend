@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for VALIDITY complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="VALIDITY"&gt;
  *   &lt;complexContent&gt;
@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VALIDITY", propOrder = {
@@ -76,11 +76,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the productid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPRODUCTID() {
         return productid;
@@ -88,11 +88,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the productid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPRODUCTID(String value) {
         this.productid = value;
@@ -100,11 +100,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the vehicle property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVEHICLE() {
         return vehicle;
@@ -112,11 +112,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the vehicle property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVEHICLE(String value) {
         this.vehicle = value;
@@ -124,11 +124,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the odxplatform property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getODXPLATFORM() {
         return odxplatform;
@@ -136,11 +136,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the odxplatform property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setODXPLATFORM(String value) {
         this.odxplatform = value;
@@ -148,11 +148,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the partnumber property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPARTNUMBER() {
         return partnumber;
@@ -160,11 +160,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the partnumber property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPARTNUMBER(String value) {
         this.partnumber = value;
@@ -172,11 +172,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the ftab property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getFTAB() {
         return ftab;
@@ -184,11 +184,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the ftab property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setFTAB(String value) {
         this.ftab = value;
@@ -196,11 +196,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the supplier property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSUPPLIER() {
         return supplier;
@@ -208,11 +208,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the supplier property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSUPPLIER(String value) {
         this.supplier = value;
@@ -220,11 +220,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the launchdate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLAUNCHDATE() {
         return launchdate;
@@ -232,11 +232,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the launchdate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLAUNCHDATE(String value) {
         this.launchdate = value;
@@ -244,11 +244,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the enddate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getENDDATE() {
         return enddate;
@@ -256,11 +256,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the enddate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setENDDATE(String value) {
         this.enddate = value;
@@ -268,11 +268,11 @@ public class VALIDITY {
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -280,11 +280,11 @@ public class VALIDITY {
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
