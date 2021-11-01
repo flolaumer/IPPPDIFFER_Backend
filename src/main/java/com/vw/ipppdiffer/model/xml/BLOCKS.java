@@ -14,20 +14,19 @@ import java.util.List;
 
 
 /**
- * <p>Java class for PROCEDURE complex type.
+ * <p>Java class for BLOCKS complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PROCEDURE"&gt;
+ * &lt;complexType name="BLOCKS"&gt;
  *   &lt;complexContent&gt;
- *     &lt;extension base="{}IB-ELEMENT"&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
  *         &lt;element name="BLOCK" type="{}BLOCK"/&gt;
- *         &lt;element name="GROUP" type="{}GROUP"/&gt;
- *         &lt;element name="SWITCH" type="{}SWITCH"/&gt;
+ *         &lt;element name="LOOP" type="{}LOOP"/&gt;
  *       &lt;/choice&gt;
- *     &lt;/extension&gt;
+ *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
@@ -35,49 +34,45 @@ import java.util.List;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PROCEDURE", propOrder = {
-    "blockOrGROUPOrSWITCH"
+@XmlType(name = "BLOCKS", propOrder = {
+    "blockOrLOOP"
 })
-public class PROCEDURE
-    extends IBELEMENT
-{
+public class BLOCKS {
 
     @XmlElements({
         @XmlElement(name = "BLOCK", type = BLOCK.class),
-        @XmlElement(name = "GROUP", type = GROUP.class),
-        @XmlElement(name = "SWITCH", type = SWITCH.class)
+        @XmlElement(name = "LOOP", type = LOOP.class)
     })
-    protected List<IBELEMENT> blockOrGROUPOrSWITCH;
+    protected List<IBIDENTIFIABLE> blockOrLOOP;
 
     /**
-     * Gets the value of the blockOrGROUPOrSWITCH property.
+     * Gets the value of the blockOrLOOP property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the blockOrGROUPOrSWITCH property.
+     * This is why there is not a <CODE>set</CODE> method for the blockOrLOOP property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getBLOCKOrGROUPOrSWITCH().add(newItem);
+     *    getBLOCKOrLOOP().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BLOCK }
-     * {@link GROUP }
-     * {@link SWITCH }
+     * {@link LOOP }
      * 
      * 
      */
-    public List<IBELEMENT> getBLOCKOrGROUPOrSWITCH() {
-        if (blockOrGROUPOrSWITCH == null) {
-            blockOrGROUPOrSWITCH = new ArrayList<IBELEMENT>();
+    public List<IBIDENTIFIABLE> getBLOCKOrLOOP() {
+        if (blockOrLOOP == null) {
+            blockOrLOOP = new ArrayList<IBIDENTIFIABLE>();
         }
-        return this.blockOrGROUPOrSWITCH;
+        return this.blockOrLOOP;
     }
 
 }

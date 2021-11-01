@@ -17,18 +17,19 @@ import java.util.List;
 
 
 /**
- * <p>Java class for PROCEDURES complex type.
+ * <p>Java class for SWITCH complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PROCEDURES"&gt;
+ * &lt;complexType name="SWITCH"&gt;
  *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *     &lt;extension base="{}IB-ELEMENT"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="PROCEDURE" type="{}PROCEDURE" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="DESC" type="{}DESC" minOccurs="0"/&gt;
+ *         &lt;element name="CASE" type="{}CASE" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
+ *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
@@ -36,41 +37,70 @@ import java.util.List;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PROCEDURES", propOrder = {
-    "procedure"
+@XmlType(name = "SWITCH", propOrder = {
+    "desc",
+    "_case"
 })
-public class PROCEDURES {
+public class SWITCH
+    extends IBELEMENT
+{
 
-    @XmlElement(name = "PROCEDURE")
-    protected List<PROCEDURE> procedure;
+    @XmlElement(name = "DESC")
+    protected String desc;
+    @XmlElement(name = "CASE", required = true)
+    protected List<CASE> _case;
 
     /**
-     * Gets the value of the procedure property.
+     * Gets the value of the desc property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDESC() {
+        return desc;
+    }
+
+    /**
+     * Sets the value of the desc property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDESC(String value) {
+        this.desc = value;
+    }
+
+    /**
+     * Gets the value of the case property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the procedure property.
+     * This is why there is not a <CODE>set</CODE> method for the case property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getPROCEDURE().add(newItem);
+     *    getCASE().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PROCEDURE }
+     * {@link CASE }
      * 
      * 
      */
-    public List<PROCEDURE> getPROCEDURE() {
-        if (procedure == null) {
-            procedure = new ArrayList<PROCEDURE>();
+    public List<CASE> getCASE() {
+        if (_case == null) {
+            _case = new ArrayList<CASE>();
         }
-        return this.procedure;
+        return this._case;
     }
 
 }
