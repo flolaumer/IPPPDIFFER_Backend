@@ -7,10 +7,12 @@ import com.vw.ipppdiffer.model.xml.IB1;
 import com.vw.ipppdiffer.service.DifferService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class DifferController implements IPPPApi {
 
