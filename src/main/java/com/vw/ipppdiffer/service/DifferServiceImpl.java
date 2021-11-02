@@ -31,8 +31,31 @@ import java.util.stream.Collectors;
 public class DifferServiceImpl implements DifferService {
 
     @Override
-    public DifferResponse getDiffer() {
-        return new DifferResponse();
+    public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) {
+        var differ = new DifferResponse();
+
+        InputStream firstFileInputStream;
+        InputStream secondFileInputStream;
+        try {
+            firstFileInputStream = firstFile.getInputStream();
+            secondFileInputStream = secondFile.getInputStream();
+        } catch (IOException e) {
+            throw new UnknownException("Could not read xml file");
+        }
+        IB1 firstIb1XMLModel = parseXMLFile(firstFileInputStream);
+        IB1 secondIb1XMLModel = parseXMLFile(secondFileInputStream);
+        Element firstTree;
+        Element secondTree;
+        try {
+            firstTree = buildTree(firstIb1XMLModel);
+            secondTree = buildTree(secondIb1XMLModel);
+        } catch (IllegalAccessException e) {
+            log.info("Could not build XML Tree");
+            throw new UnknownException("Could not build XML Tree");
+        }
+        differ.setFirstTree(firstTree);
+        differ.setSecondTree(secondTree);
+        return differ;
     }
 
     @SuppressWarnings("unchecked")

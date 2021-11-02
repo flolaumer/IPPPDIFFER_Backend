@@ -1,6 +1,5 @@
 package com.vw.ipppdiffer.controller;
 
-
 import com.vw.ipppdiffer.api.IPPPApi;
 import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
@@ -18,7 +17,7 @@ public class DifferController implements IPPPApi {
 
     @Override
     public DifferResponse startDiffer(MultipartFile firstFile, MultipartFile secondFile) {
-        return service.getDiffer();
+        return service.getDiffer(firstFile, secondFile);
     }
 
     @Override
