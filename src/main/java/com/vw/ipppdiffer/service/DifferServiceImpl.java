@@ -2,6 +2,7 @@ package com.vw.ipppdiffer.service;
 
 import com.vw.ipppdiffer.exception.UnknownException;
 import com.vw.ipppdiffer.model.enums.ColourType;
+import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
 import com.vw.ipppdiffer.model.xml.IB1;
 import com.vw.ipppdiffer.model.xml.ObjectFactory;
@@ -30,8 +31,8 @@ import java.util.stream.Collectors;
 public class DifferServiceImpl implements DifferService {
 
     @Override
-    public IB1 getDiffer() {
-        return new IB1();
+    public DifferResponse getDiffer() {
+        return new DifferResponse();
     }
 
     @SuppressWarnings("unchecked")

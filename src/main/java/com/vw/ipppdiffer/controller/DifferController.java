@@ -2,8 +2,8 @@ package com.vw.ipppdiffer.controller;
 
 
 import com.vw.ipppdiffer.api.IPPPApi;
+import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
-import com.vw.ipppdiffer.model.xml.IB1;
 import com.vw.ipppdiffer.service.DifferService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class DifferController implements IPPPApi {
     private final DifferService service;
 
     @Override
-    public IB1 getDiffer() {
+    public DifferResponse startDiffer(MultipartFile firstFile, MultipartFile secondFile) {
         return service.getDiffer();
     }
 
