@@ -15,9 +15,9 @@ import java.math.BigInteger;
 
 /**
  * <p>Java class for DEVICE-BLOCK complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DEVICE-BLOCK"&gt;
  *   &lt;complexContent&gt;
@@ -48,8 +48,8 @@ import java.math.BigInteger;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DEVICE-BLOCK", propOrder = {
@@ -117,11 +117,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -129,11 +129,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -141,11 +141,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the tis property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TIS }
-     *     
+     *
      */
     public TIS getTIS() {
         return tis;
@@ -153,11 +153,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the tis property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TIS }
-     *     
+     *
      */
     public void setTIS(TIS value) {
         this.tis = value;
@@ -165,11 +165,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the authorref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public REFERENCE getAUTHORREF() {
         return authorref;
@@ -177,11 +177,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the authorref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public void setAUTHORREF(REFERENCE value) {
         this.authorref = value;
@@ -189,11 +189,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the tags property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TAGS }
-     *     
+     *
      */
     public TAGS getTAGS() {
         return tags;
@@ -201,11 +201,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the tags property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TAGS }
-     *     
+     *
      */
     public void setTAGS(TAGS value) {
         this.tags = value;
@@ -213,11 +213,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the variants property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public VARIANTS getVARIANTS() {
         return variants;
@@ -225,11 +225,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the variants property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public void setVARIANTS(VARIANTS value) {
         this.variants = value;
@@ -237,11 +237,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the las property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLAS() {
         return las;
@@ -249,11 +249,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the las property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLAS(String value) {
         this.las = value;
@@ -261,11 +261,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the launchdate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLAUNCHDATE() {
         return launchdate;
@@ -273,11 +273,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the launchdate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLAUNCHDATE(String value) {
         this.launchdate = value;
@@ -285,11 +285,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the enddate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getENDDATE() {
         return enddate;
@@ -297,11 +297,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the enddate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setENDDATE(String value) {
         this.enddate = value;
@@ -309,11 +309,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the blockdependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BLOCKDEPENDENCIES }
-     *     
+     *
      */
     public BLOCKDEPENDENCIES getBLOCKDEPENDENCIES() {
         return blockdependencies;
@@ -321,11 +321,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the blockdependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BLOCKDEPENDENCIES }
-     *     
+     *
      */
     public void setBLOCKDEPENDENCIES(BLOCKDEPENDENCIES value) {
         this.blockdependencies = value;
@@ -333,11 +333,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the conditions property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CONDITIONS }
-     *     
+     *
      */
     public CONDITIONS getCONDITIONS() {
         return conditions;
@@ -345,11 +345,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the conditions property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CONDITIONS }
-     *     
+     *
      */
     public void setCONDITIONS(CONDITIONS value) {
         this.conditions = value;
@@ -357,11 +357,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the parameters property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PARAMETERS }
-     *     
+     *
      */
     public PARAMETERS getPARAMETERS() {
         return parameters;
@@ -369,11 +369,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the parameters property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PARAMETERS }
-     *     
+     *
      */
     public void setPARAMETERS(PARAMETERS value) {
         this.parameters = value;
@@ -381,11 +381,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the externalparameters property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link EXTERNALPARAMETERS }
-     *     
+     *
      */
     public EXTERNALPARAMETERS getEXTERNALPARAMETERS() {
         return externalparameters;
@@ -393,11 +393,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the externalparameters property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link EXTERNALPARAMETERS }
-     *     
+     *
      */
     public void setEXTERNALPARAMETERS(EXTERNALPARAMETERS value) {
         this.externalparameters = value;
@@ -405,11 +405,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the steps property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DEVICESTEPS }
-     *     
+     *
      */
     public DEVICESTEPS getSTEPS() {
         return steps;
@@ -417,11 +417,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the steps property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DEVICESTEPS }
-     *     
+     *
      */
     public void setSTEPS(DEVICESTEPS value) {
         this.steps = value;
@@ -429,11 +429,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the pollintervall property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public BigInteger getPOLLINTERVALL() {
         return pollintervall;
@@ -441,11 +441,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the pollintervall property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public void setPOLLINTERVALL(BigInteger value) {
         this.pollintervall = value;
@@ -453,11 +453,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the timeout property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public BigInteger getTIMEOUT() {
         return timeout;
@@ -465,11 +465,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the timeout property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public void setTIMEOUT(BigInteger value) {
         this.timeout = value;
@@ -477,11 +477,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the executiontime property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public BigDecimal getEXECUTIONTIME() {
         return executiontime;
@@ -489,11 +489,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the executiontime property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *     
+     *
      */
     public void setEXECUTIONTIME(BigDecimal value) {
         this.executiontime = value;
@@ -501,11 +501,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the shortname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getShortname() {
         return shortname;
@@ -513,11 +513,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the shortname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setShortname(String value) {
         this.shortname = value;
@@ -525,11 +525,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the version property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public BigInteger getVersion() {
         return version;
@@ -537,11 +537,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the version property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public void setVersion(BigInteger value) {
         this.version = value;
@@ -549,11 +549,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the optional property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isOptional() {
         if (optional == null) {
@@ -565,11 +565,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the optional property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setOptional(Boolean value) {
         this.optional = value;
@@ -577,11 +577,11 @@ public class DEVICEBLOCK
 
     /**
      * Gets the value of the type property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DEVICEBLOCKTYPE }
-     *     
+     *
      */
     public DEVICEBLOCKTYPE getType() {
         if (type == null) {
@@ -593,11 +593,11 @@ public class DEVICEBLOCK
 
     /**
      * Sets the value of the type property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DEVICEBLOCKTYPE }
-     *     
+     *
      */
     public void setType(DEVICEBLOCKTYPE value) {
         this.type = value;

@@ -18,9 +18,9 @@ import java.util.List;
 
 /**
  * <p>Java class for DIAG-PARAMETERS complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DIAG-PARAMETERS"&gt;
  *   &lt;complexContent&gt;
@@ -33,8 +33,8 @@ import java.util.List;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DIAG-PARAMETERS", propOrder = {
@@ -50,11 +50,11 @@ public class DIAGPARAMETERS {
 
     /**
      * Gets the value of the dataidentifier property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDATAIDENTIFIER() {
         return dataidentifier;
@@ -62,11 +62,11 @@ public class DIAGPARAMETERS {
 
     /**
      * Sets the value of the dataidentifier property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDATAIDENTIFIER(String value) {
         this.dataidentifier = value;
@@ -74,25 +74,25 @@ public class DIAGPARAMETERS {
 
     /**
      * Gets the value of the diagparameter property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the diagparameter property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDIAGPARAMETER().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DIAGPARAMETER }
-     * 
-     * 
+     *
+     *
      */
     public List<DIAGPARAMETER> getDIAGPARAMETER() {
         if (diagparameter == null) {

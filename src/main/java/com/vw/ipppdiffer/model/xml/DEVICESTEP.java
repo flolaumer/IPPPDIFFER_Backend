@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DEVICE-STEP complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DEVICE-STEP"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DEVICE-STEP", propOrder = {
@@ -54,11 +54,11 @@ public class DEVICESTEP
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -66,11 +66,11 @@ public class DEVICESTEP
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -78,11 +78,11 @@ public class DEVICESTEP
 
     /**
      * Gets the value of the tis property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TIS }
-     *     
+     *
      */
     public TIS getTIS() {
         return tis;
@@ -90,11 +90,11 @@ public class DEVICESTEP
 
     /**
      * Sets the value of the tis property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TIS }
-     *     
+     *
      */
     public void setTIS(TIS value) {
         this.tis = value;
@@ -102,11 +102,11 @@ public class DEVICESTEP
 
     /**
      * Gets the value of the deviceparameters property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DEVICEPARAMETERS }
-     *     
+     *
      */
     public DEVICEPARAMETERS getDEVICEPARAMETERS() {
         return deviceparameters;
@@ -114,11 +114,11 @@ public class DEVICESTEP
 
     /**
      * Sets the value of the deviceparameters property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DEVICEPARAMETERS }
-     *     
+     *
      */
     public void setDEVICEPARAMETERS(DEVICEPARAMETERS value) {
         this.deviceparameters = value;

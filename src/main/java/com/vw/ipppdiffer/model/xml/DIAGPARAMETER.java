@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for DIAG-PARAMETER complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DIAG-PARAMETER"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DIAG-PARAMETER", propOrder = {
@@ -70,11 +70,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the longname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLONGNAME() {
         return longname;
@@ -82,11 +82,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the longname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLONGNAME(String value) {
         this.longname = value;
@@ -94,11 +94,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the shortname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSHORTNAME() {
         return shortname;
@@ -106,11 +106,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the shortname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSHORTNAME(String value) {
         this.shortname = value;
@@ -118,11 +118,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the messagetype property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link MESSAGETYPE }
-     *     
+     *
      */
     public MESSAGETYPE getMESSAGETYPE() {
         return messagetype;
@@ -130,11 +130,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the messagetype property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link MESSAGETYPE }
-     *     
+     *
      */
     public void setMESSAGETYPE(MESSAGETYPE value) {
         this.messagetype = value;
@@ -142,11 +142,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the responseshortname property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getRESPONSESHORTNAME() {
         return responseshortname;
@@ -154,11 +154,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the responseshortname property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setRESPONSESHORTNAME(String value) {
         this.responseshortname = value;
@@ -166,11 +166,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPATH() {
         return path;
@@ -178,11 +178,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPATH(String value) {
         this.path = value;
@@ -190,11 +190,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the datatype property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDATATYPE() {
         return datatype;
@@ -202,11 +202,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the datatype property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDATATYPE(String value) {
         this.datatype = value;
@@ -214,11 +214,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the valueproxy property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public VALUEPROXY getVALUEPROXY() {
         return valueproxy;
@@ -226,11 +226,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the valueproxy property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VALUEPROXY }
-     *     
+     *
      */
     public void setVALUEPROXY(VALUEPROXY value) {
         this.valueproxy = value;
@@ -238,11 +238,11 @@ public class DIAGPARAMETER {
 
     /**
      * Gets the value of the displayunit property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDISPLAYUNIT() {
         return displayunit;
@@ -250,11 +250,11 @@ public class DIAGPARAMETER {
 
     /**
      * Sets the value of the displayunit property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDISPLAYUNIT(String value) {
         this.displayunit = value;

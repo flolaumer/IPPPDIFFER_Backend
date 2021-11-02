@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DIAGNOSTIC-INFO complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DIAGNOSTIC-INFO"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DIAGNOSTIC-INFO", propOrder = {
@@ -60,11 +60,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -72,11 +72,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -84,11 +84,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Gets the value of the diagprotocol property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDIAGPROTOCOL() {
         return diagprotocol;
@@ -96,11 +96,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Sets the value of the diagprotocol property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDIAGPROTOCOL(String value) {
         this.diagprotocol = value;
@@ -108,11 +108,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Gets the value of the transportprotocol property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTRANSPORTPROTOCOL() {
         return transportprotocol;
@@ -120,11 +120,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Sets the value of the transportprotocol property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTRANSPORTPROTOCOL(String value) {
         this.transportprotocol = value;
@@ -132,11 +132,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Gets the value of the ecuid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getECUID() {
         return ecuid;
@@ -144,11 +144,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Sets the value of the ecuid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setECUID(String value) {
         this.ecuid = value;
@@ -156,11 +156,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Gets the value of the pdx property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PDX }
-     *     
+     *
      */
     public PDX getPDX() {
         return pdx;
@@ -168,11 +168,11 @@ public class DIAGNOSTICINFO {
 
     /**
      * Sets the value of the pdx property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PDX }
-     *     
+     *
      */
     public void setPDX(PDX value) {
         this.pdx = value;

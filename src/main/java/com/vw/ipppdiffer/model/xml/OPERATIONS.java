@@ -18,9 +18,9 @@ import java.util.List;
 
 /**
  * <p>Java class for OPERATIONS complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="OPERATIONS"&gt;
  *   &lt;complexContent&gt;
@@ -32,8 +32,8 @@ import java.util.List;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OPERATIONS", propOrder = {
@@ -46,25 +46,25 @@ public class OPERATIONS {
 
     /**
      * Gets the value of the iboperationref property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the iboperationref property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getIBOPERATIONREF().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link REFERENCE }
-     * 
-     * 
+     *
+     *
      */
     public List<REFERENCE> getIBOPERATIONREF() {
         if (iboperationref == null) {

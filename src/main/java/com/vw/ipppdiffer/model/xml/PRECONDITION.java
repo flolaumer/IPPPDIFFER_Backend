@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for PRE-CONDITION complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="PRE-CONDITION"&gt;
  *   &lt;simpleContent&gt;
@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/simpleContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PRE-CONDITION")
@@ -45,11 +45,11 @@ public class PRECONDITION
 
     /**
      * Gets the value of the pRelevant property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isPRelevant() {
         if (pRelevant == null) {
@@ -61,11 +61,11 @@ public class PRECONDITION
 
     /**
      * Sets the value of the pRelevant property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setPRelevant(Boolean value) {
         this.pRelevant = value;
@@ -73,11 +73,11 @@ public class PRECONDITION
 
     /**
      * Gets the value of the kdRelevant property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isKdRelevant() {
         if (kdRelevant == null) {
@@ -89,11 +89,11 @@ public class PRECONDITION
 
     /**
      * Sets the value of the kdRelevant property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setKdRelevant(Boolean value) {
         this.kdRelevant = value;

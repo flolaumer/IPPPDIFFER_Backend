@@ -15,9 +15,9 @@ import java.util.List;
 
 /**
  * <p>Java class for IF complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IF"&gt;
  *   &lt;complexContent&gt;
@@ -35,35 +35,30 @@ import java.util.List;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IF", propOrder = {
-    "desc",
-    "stepOrHMISTEPOrDEVICESTEP"
+        "desc",
+        "stepOrHMISTEPOrDEVICESTEP"
 })
 public class IF
-    extends IBELEMENT
-{
+        extends IBELEMENT {
 
     @XmlElement(name = "DESC")
     protected String desc;
     @XmlElements({
-        @XmlElement(name = "STEP", type = STEP.class),
-        @XmlElement(name = "HMI-STEP", type = HMISTEP.class),
-        @XmlElement(name = "DEVICE-STEP", type = DEVICESTEP.class),
-        @XmlElement(name = "DATA-STEP", type = DATASTEP.class)
+            @XmlElement(name = "STEP", type = STEP.class),
+            @XmlElement(name = "HMI-STEP", type = HMISTEP.class),
+            @XmlElement(name = "DEVICE-STEP", type = DEVICESTEP.class),
+            @XmlElement(name = "DATA-STEP", type = DATASTEP.class)
     })
     protected List<STEPELEMENT> stepOrHMISTEPOrDEVICESTEP;
 
     /**
      * Gets the value of the desc property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDESC() {
         return desc;
@@ -71,11 +66,9 @@ public class IF
 
     /**
      * Sets the value of the desc property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -83,28 +76,26 @@ public class IF
 
     /**
      * Gets the value of the stepOrHMISTEPOrDEVICESTEP property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the stepOrHMISTEPOrDEVICESTEP property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSTEPOrHMISTEPOrDEVICESTEP().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link STEP }
      * {@link HMISTEP }
      * {@link DEVICESTEP }
      * {@link DATASTEP }
-     * 
-     * 
      */
     public List<STEPELEMENT> getSTEPOrHMISTEPOrDEVICESTEP() {
         if (stepOrHMISTEPOrDEVICESTEP == null) {

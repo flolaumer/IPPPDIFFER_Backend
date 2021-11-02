@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for ENVIRONMENT complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="ENVIRONMENT"&gt;
  *   &lt;complexContent&gt;
@@ -35,8 +35,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ENVIRONMENT", propOrder = {
@@ -64,11 +64,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the preconditions property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PRECONDITIONS }
-     *     
+     *
      */
     public PRECONDITIONS getPRECONDITIONS() {
         return preconditions;
@@ -76,11 +76,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the preconditions property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PRECONDITIONS }
-     *     
+     *
      */
     public void setPRECONDITIONS(PRECONDITIONS value) {
         this.preconditions = value;
@@ -88,11 +88,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the dependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DEPENDENCIES }
-     *     
+     *
      */
     public DEPENDENCIES getDEPENDENCIES() {
         return dependencies;
@@ -100,11 +100,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the dependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DEPENDENCIES }
-     *     
+     *
      */
     public void setDEPENDENCIES(DEPENDENCIES value) {
         this.dependencies = value;
@@ -112,11 +112,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the repairdependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link REPAIRDEPENDENCIES }
-     *     
+     *
      */
     public REPAIRDEPENDENCIES getREPAIRDEPENDENCIES() {
         return repairdependencies;
@@ -124,11 +124,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the repairdependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link REPAIRDEPENDENCIES }
-     *     
+     *
      */
     public void setREPAIRDEPENDENCIES(REPAIRDEPENDENCIES value) {
         this.repairdependencies = value;
@@ -136,11 +136,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the accessauthorisations property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link ACCESSAUTHORISATIONS }
-     *     
+     *
      */
     public ACCESSAUTHORISATIONS getACCESSAUTHORISATIONS() {
         return accessauthorisations;
@@ -148,11 +148,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the accessauthorisations property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link ACCESSAUTHORISATIONS }
-     *     
+     *
      */
     public void setACCESSAUTHORISATIONS(ACCESSAUTHORISATIONS value) {
         this.accessauthorisations = value;
@@ -160,11 +160,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the productionmodes property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link PRODUCTIONMODES }
-     *     
+     *
      */
     public PRODUCTIONMODES getPRODUCTIONMODES() {
         return productionmodes;
@@ -172,11 +172,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the productionmodes property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link PRODUCTIONMODES }
-     *     
+     *
      */
     public void setPRODUCTIONMODES(PRODUCTIONMODES value) {
         this.productionmodes = value;
@@ -184,11 +184,11 @@ public class ENVIRONMENT {
 
     /**
      * Gets the value of the transportmode property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTRANSPORTMODE() {
         return transportmode;
@@ -196,11 +196,11 @@ public class ENVIRONMENT {
 
     /**
      * Sets the value of the transportmode property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTRANSPORTMODE(String value) {
         this.transportmode = value;

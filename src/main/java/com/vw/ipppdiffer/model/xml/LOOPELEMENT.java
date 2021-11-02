@@ -14,9 +14,9 @@ import java.math.BigInteger;
 
 /**
  * <p>Java class for LOOP-ELEMENT complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="LOOP-ELEMENT"&gt;
  *   &lt;complexContent&gt;
@@ -33,8 +33,8 @@ import java.math.BigInteger;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LOOP-ELEMENT", propOrder = {
@@ -66,11 +66,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAME() {
         return name;
@@ -78,11 +78,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAME(String value) {
         this.name = value;
@@ -90,11 +90,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the nameen property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAMEEN() {
         return nameen;
@@ -102,11 +102,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the nameen property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAMEEN(String value) {
         this.nameen = value;
@@ -114,11 +114,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -126,11 +126,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -138,11 +138,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the pollintervall property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public BigInteger getPOLLINTERVALL() {
         return pollintervall;
@@ -150,11 +150,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the pollintervall property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public void setPOLLINTERVALL(BigInteger value) {
         this.pollintervall = value;
@@ -162,11 +162,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the timeout property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public BigInteger getTIMEOUT() {
         return timeout;
@@ -174,11 +174,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the timeout property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *     
+     *
      */
     public void setTIMEOUT(BigInteger value) {
         this.timeout = value;
@@ -186,11 +186,11 @@ public class LOOPELEMENT
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPath() {
         return path;
@@ -198,11 +198,11 @@ public class LOOPELEMENT
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPath(String value) {
         this.path = value;

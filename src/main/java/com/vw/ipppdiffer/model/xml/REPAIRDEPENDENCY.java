@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for REPAIR-DEPENDENCY complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="REPAIR-DEPENDENCY"&gt;
  *   &lt;complexContent&gt;
@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "REPAIR-DEPENDENCY", propOrder = {
@@ -56,11 +56,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Gets the value of the function property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getFUNCTION() {
         return function;
@@ -68,11 +68,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Sets the value of the function property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setFUNCTION(String value) {
         this.function = value;
@@ -80,11 +80,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Gets the value of the variants property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public VARIANTS getVARIANTS() {
         return variants;
@@ -92,11 +92,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Sets the value of the variants property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VARIANTS }
-     *     
+     *
      */
     public void setVARIANTS(VARIANTS value) {
         this.variants = value;
@@ -104,11 +104,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Gets the value of the changedependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CHANGEDEPENDENCIES }
-     *     
+     *
      */
     public CHANGEDEPENDENCIES getCHANGEDEPENDENCIES() {
         return changedependencies;
@@ -116,11 +116,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Sets the value of the changedependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CHANGEDEPENDENCIES }
-     *     
+     *
      */
     public void setCHANGEDEPENDENCIES(CHANGEDEPENDENCIES value) {
         this.changedependencies = value;
@@ -128,11 +128,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Gets the value of the calibrationdependencies property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CALIBRATIONDEPENDENCIES }
-     *     
+     *
      */
     public CALIBRATIONDEPENDENCIES getCALIBRATIONDEPENDENCIES() {
         return calibrationdependencies;
@@ -140,11 +140,11 @@ public class REPAIRDEPENDENCY {
 
     /**
      * Sets the value of the calibrationdependencies property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CALIBRATIONDEPENDENCIES }
-     *     
+     *
      */
     public void setCALIBRATIONDEPENDENCIES(CALIBRATIONDEPENDENCIES value) {
         this.calibrationdependencies = value;

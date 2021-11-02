@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for IB-DESCRIPTION complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IB-DESCRIPTION"&gt;
  *   &lt;complexContent&gt;
@@ -37,8 +37,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IB-DESCRIPTION", propOrder = {
@@ -66,11 +66,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the ibvariants property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link IBVARIANTS }
-     *     
+     *
      */
     public IBVARIANTS getIBVARIANTS() {
         return ibvariants;
@@ -78,11 +78,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the ibvariants property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link IBVARIANTS }
-     *     
+     *
      */
     public void setIBVARIANTS(IBVARIANTS value) {
         this.ibvariants = value;
@@ -90,11 +90,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the validities property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link VALIDITIES }
-     *     
+     *
      */
     public VALIDITIES getVALIDITIES() {
         return validities;
@@ -102,11 +102,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the validities property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link VALIDITIES }
-     *     
+     *
      */
     public void setVALIDITIES(VALIDITIES value) {
         this.validities = value;
@@ -114,11 +114,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the validitiesref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVALIDITIESREF() {
         return validitiesref;
@@ -126,11 +126,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the validitiesref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVALIDITIESREF(String value) {
         this.validitiesref = value;
@@ -138,11 +138,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the objectives property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link OBJECTIVES }
-     *     
+     *
      */
     public OBJECTIVES getOBJECTIVES() {
         return objectives;
@@ -150,11 +150,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the objectives property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link OBJECTIVES }
-     *     
+     *
      */
     public void setOBJECTIVES(OBJECTIVES value) {
         this.objectives = value;
@@ -162,11 +162,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the ibnz property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link IBNZ }
-     *     
+     *
      */
     public IBNZ getIBNZ() {
         return ibnz;
@@ -174,11 +174,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the ibnz property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link IBNZ }
-     *     
+     *
      */
     public void setIBNZ(IBNZ value) {
         this.ibnz = value;
@@ -186,11 +186,11 @@ public class IBDESCRIPTION {
 
     /**
      * Gets the value of the slaves property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link SLAVES }
-     *     
+     *
      */
     public SLAVES getSLAVES() {
         return slaves;
@@ -198,11 +198,11 @@ public class IBDESCRIPTION {
 
     /**
      * Sets the value of the slaves property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link SLAVES }
-     *     
+     *
      */
     public void setSLAVES(SLAVES value) {
         this.slaves = value;

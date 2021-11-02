@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Java class for IMPORT-REF complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IMPORT-REF"&gt;
  *   &lt;complexContent&gt;
@@ -30,8 +30,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IMPORT-REF")
@@ -51,11 +51,11 @@ public class IMPORTREF {
 
     /**
      * Gets the value of the id property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getId() {
         return id;
@@ -63,11 +63,11 @@ public class IMPORTREF {
 
     /**
      * Sets the value of the id property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setId(String value) {
         this.id = value;
@@ -75,11 +75,11 @@ public class IMPORTREF {
 
     /**
      * Gets the value of the idref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getIDREF() {
         return idref;
@@ -87,11 +87,11 @@ public class IMPORTREF {
 
     /**
      * Sets the value of the idref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setIDREF(String value) {
         this.idref = value;
@@ -99,11 +99,11 @@ public class IMPORTREF {
 
     /**
      * Gets the value of the docref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDOCREF() {
         return docref;
@@ -111,11 +111,11 @@ public class IMPORTREF {
 
     /**
      * Sets the value of the docref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDOCREF(String value) {
         this.docref = value;
@@ -123,11 +123,11 @@ public class IMPORTREF {
 
     /**
      * Gets the value of the version property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVERSION() {
         return version;
@@ -135,11 +135,11 @@ public class IMPORTREF {
 
     /**
      * Sets the value of the version property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVERSION(String value) {
         this.version = value;

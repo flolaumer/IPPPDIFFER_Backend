@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for IB-ELEMENT complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="IB-ELEMENT"&gt;
  *   &lt;complexContent&gt;
@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IB-ELEMENT", propOrder = {
@@ -69,11 +69,11 @@ public class IBELEMENT
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAME() {
         return name;
@@ -81,11 +81,11 @@ public class IBELEMENT
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAME(String value) {
         this.name = value;
@@ -93,11 +93,11 @@ public class IBELEMENT
 
     /**
      * Gets the value of the nameen property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAMEEN() {
         return nameen;
@@ -105,11 +105,11 @@ public class IBELEMENT
 
     /**
      * Sets the value of the nameen property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAMEEN(String value) {
         this.nameen = value;
@@ -117,11 +117,11 @@ public class IBELEMENT
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPath() {
         return path;
@@ -129,11 +129,11 @@ public class IBELEMENT
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPath(String value) {
         this.path = value;

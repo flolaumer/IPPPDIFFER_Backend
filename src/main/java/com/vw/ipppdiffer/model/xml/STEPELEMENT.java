@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * <p>Java class for STEP-ELEMENT complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="STEP-ELEMENT"&gt;
  *   &lt;complexContent&gt;
@@ -35,8 +35,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "STEP-ELEMENT", propOrder = {
@@ -71,11 +71,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the name property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAME() {
         return name;
@@ -83,11 +83,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the name property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAME(String value) {
         this.name = value;
@@ -95,11 +95,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the nameen property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNAMEEN() {
         return nameen;
@@ -107,11 +107,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the nameen property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNAMEEN(String value) {
         this.nameen = value;
@@ -119,11 +119,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the id property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getId() {
         return id;
@@ -131,11 +131,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the id property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setId(String value) {
         this.id = value;
@@ -143,11 +143,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the path property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPath() {
         return path;
@@ -155,11 +155,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the path property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPath(String value) {
         this.path = value;
@@ -167,11 +167,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the testResult property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isTestResult() {
         return testResult;
@@ -179,11 +179,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the testResult property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setTestResult(Boolean value) {
         this.testResult = value;
@@ -191,11 +191,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the cyclic property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isCyclic() {
         if (cyclic == null) {
@@ -207,11 +207,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the cyclic property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setCyclic(Boolean value) {
         this.cyclic = value;
@@ -219,11 +219,11 @@ public class STEPELEMENT {
 
     /**
      * Gets the value of the manualOperations property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isManualOperations() {
         return manualOperations;
@@ -231,11 +231,11 @@ public class STEPELEMENT {
 
     /**
      * Sets the value of the manualOperations property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setManualOperations(Boolean value) {
         this.manualOperations = value;

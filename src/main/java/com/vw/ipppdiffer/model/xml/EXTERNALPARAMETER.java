@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * <p>Java class for EXTERNAL-PARAMETER complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="EXTERNAL-PARAMETER"&gt;
  *   &lt;complexContent&gt;
@@ -31,8 +31,8 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EXTERNAL-PARAMETER", propOrder = {
@@ -58,11 +58,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Gets the value of the parametername property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPARAMETERNAME() {
         return parametername;
@@ -70,11 +70,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Sets the value of the parametername property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPARAMETERNAME(String value) {
         this.parametername = value;
@@ -82,11 +82,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Gets the value of the parameterid property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getPARAMETERID() {
         return parameterid;
@@ -94,11 +94,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Sets the value of the parameterid property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPARAMETERID(String value) {
         this.parameterid = value;
@@ -106,11 +106,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Gets the value of the desc property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDESC() {
         return desc;
@@ -118,11 +118,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Sets the value of the desc property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDESC(String value) {
         this.desc = value;
@@ -130,11 +130,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Gets the value of the default property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDEFAULT() {
         return _default;
@@ -142,11 +142,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Sets the value of the default property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDEFAULT(String value) {
         this._default = value;
@@ -154,11 +154,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Gets the value of the optional property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isOptional() {
         if (optional == null) {
@@ -170,11 +170,11 @@ public class EXTERNALPARAMETER
 
     /**
      * Sets the value of the optional property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setOptional(Boolean value) {
         this.optional = value;

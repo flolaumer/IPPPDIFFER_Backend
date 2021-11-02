@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DOCUMENT-INFO complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="DOCUMENT-INFO"&gt;
  *   &lt;complexContent&gt;
@@ -31,8 +31,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DOCUMENT-INFO", propOrder = {
@@ -48,11 +48,11 @@ public class DOCUMENTINFO {
 
     /**
      * Gets the value of the contacts property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CONTACTS }
-     *     
+     *
      */
     public CONTACTS getCONTACTS() {
         return contacts;
@@ -60,11 +60,11 @@ public class DOCUMENTINFO {
 
     /**
      * Sets the value of the contacts property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CONTACTS }
-     *     
+     *
      */
     public void setCONTACTS(CONTACTS value) {
         this.contacts = value;
@@ -72,11 +72,11 @@ public class DOCUMENTINFO {
 
     /**
      * Gets the value of the docrevisions property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link DOCREVISIONS }
-     *     
+     *
      */
     public DOCREVISIONS getDOCREVISIONS() {
         return docrevisions;
@@ -84,11 +84,11 @@ public class DOCUMENTINFO {
 
     /**
      * Sets the value of the docrevisions property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link DOCREVISIONS }
-     *     
+     *
      */
     public void setDOCREVISIONS(DOCREVISIONS value) {
         this.docrevisions = value;

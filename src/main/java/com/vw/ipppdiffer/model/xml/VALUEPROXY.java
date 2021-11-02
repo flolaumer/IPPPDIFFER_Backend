@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for VALUE-PROXY complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="VALUE-PROXY"&gt;
  *   &lt;complexContent&gt;
@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "VALUE-PROXY", propOrder = {
@@ -54,11 +54,11 @@ public class VALUEPROXY {
 
     /**
      * Gets the value of the valueref property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public REFERENCE getVALUEREF() {
         return valueref;
@@ -66,11 +66,11 @@ public class VALUEPROXY {
 
     /**
      * Sets the value of the valueref property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link REFERENCE }
-     *     
+     *
      */
     public void setVALUEREF(REFERENCE value) {
         this.valueref = value;
@@ -78,11 +78,11 @@ public class VALUEPROXY {
 
     /**
      * Gets the value of the value property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVALUE() {
         return value;
@@ -90,11 +90,11 @@ public class VALUEPROXY {
 
     /**
      * Sets the value of the value property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVALUE(String value) {
         this.value = value;
@@ -102,11 +102,11 @@ public class VALUEPROXY {
 
     /**
      * Gets the value of the tolerance property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link TOLERANCE }
-     *     
+     *
      */
     public TOLERANCE getTOLERANCE() {
         return tolerance;
@@ -114,11 +114,11 @@ public class VALUEPROXY {
 
     /**
      * Sets the value of the tolerance property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link TOLERANCE }
-     *     
+     *
      */
     public void setTOLERANCE(TOLERANCE value) {
         this.tolerance = value;
