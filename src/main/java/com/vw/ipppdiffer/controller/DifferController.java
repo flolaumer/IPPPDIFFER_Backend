@@ -17,6 +17,11 @@ public class DifferController implements IPPPApi {
     private final DifferService service;
 
     @Override
+    public String startDiffer2() {
+        return "Success";
+    }
+
+    @Override
     public DifferResponse startDiffer(MultipartFile firstFile, MultipartFile secondFile) {
         return service.getDiffer();
     }
