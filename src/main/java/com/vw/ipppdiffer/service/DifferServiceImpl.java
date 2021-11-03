@@ -2,6 +2,7 @@ package com.vw.ipppdiffer.service;
 
 import com.vw.ipppdiffer.exception.UnknownException;
 import com.vw.ipppdiffer.model.enums.ColourType;
+import com.vw.ipppdiffer.model.response.Attribute;
 import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
 import com.vw.ipppdiffer.model.xml.IB1;
@@ -14,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,7 +35,6 @@ public class DifferServiceImpl implements DifferService {
     @Override
     public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) {
         var differ = new DifferResponse();
-
         InputStream firstFileInputStream;
         InputStream secondFileInputStream;
         try {
@@ -51,6 +52,7 @@ public class DifferServiceImpl implements DifferService {
             secondTree = buildTree(secondIb1XMLModel);
         } catch (IllegalAccessException e) {
             log.info("Could not build XML Tree");
+            e.printStackTrace();
             throw new UnknownException("Could not build XML Tree");
         }
         differ.setFirstTree(firstTree);
@@ -94,14 +96,23 @@ public class DifferServiceImpl implements DifferService {
         String name = object.getClass().getSimpleName();
         List<Element> children = new ArrayList<>();
         Class<?> clazz = object.getClass();
+        List<Attribute> attributes = new ArrayList<>();
         List<Field> fields = new ArrayList<>(Arrays.asList(clazz.getDeclaredFields()));
         for (Field field : fields) {
+            field.setAccessible(true);
+            if (hasAnnotation(field, XmlAttribute.class) && field.get(object) != null) {
+                Attribute attribute = new Attribute();
+                attribute.setName(field.getName());
+                attribute.setValue(field.get(object).toString());
+                attributes.add(attribute);
+            }
             if (hasAnnotation(field, XmlElement.class) && !isSimpleType(field.getType())) {
                 createIntermediateNode(children, object, field);
             } else if (isSimpleType(field.getType())) {
                 createLeafNode(children, object, field);
             }
         }
+        element.setAttributes(attributes);
         element.setColor(ColourType.BLACK.value);
         element.setName(name);
         element.setChildren(children);
@@ -109,7 +120,6 @@ public class DifferServiceImpl implements DifferService {
     }
 
     private void createIntermediateNode(List<Element> children, Object object, Field field) throws IllegalAccessException {
-        field.setAccessible(true);
         if (field.get(object) != null && field.getType() != List.class) {
             Element childElement = buildTree(field.get(object));
             children.add(childElement);
@@ -122,7 +132,6 @@ public class DifferServiceImpl implements DifferService {
     }
 
     private void createLeafNode(List<Element> children, Object object, Field field) throws IllegalAccessException {
-        field.setAccessible(true);
         if (field.get(object) != null) {
             Element leaf = new Element();
             leaf.setName(field.getName());

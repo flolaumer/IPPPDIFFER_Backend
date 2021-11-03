@@ -20,7 +20,8 @@ public class Element {
     private String value;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<Element> children;
-
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<Attribute> attributes;
 
     public Element() {
         this.id = nextId;
