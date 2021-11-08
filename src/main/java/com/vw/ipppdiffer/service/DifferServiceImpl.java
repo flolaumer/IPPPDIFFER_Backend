@@ -10,6 +10,7 @@ import com.vw.ipppdiffer.model.xml.ObjectFactory;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.xml.bind.JAXBContext;
@@ -17,6 +18,8 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElements;
+import javax.xml.bind.annotation.XmlType;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
@@ -24,8 +27,11 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static java.util.Collections.singletonList;
 
 @Slf4j
 @Service
@@ -34,46 +40,82 @@ public class DifferServiceImpl implements DifferService {
 
     @Override
     public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) {
-        var differ = new DifferResponse();
-        InputStream firstFileInputStream;
-        InputStream secondFileInputStream;
-        try {
-            firstFileInputStream = firstFile.getInputStream();
-            secondFileInputStream = secondFile.getInputStream();
-        } catch (IOException e) {
-            throw new UnknownException("Could not read xml file");
+        Element firstTree = buildTreeFromFile(firstFile, ColourType.NONE);
+        Element secondTree = buildTreeFromFile(secondFile, ColourType.NONE);
+        compareTrees(singletonList(firstTree), singletonList(secondTree));
+        return new DifferResponse(firstTree, secondTree);
+    }
+
+    @Override
+    public Element getTreeStructure(MultipartFile file) {
+        return buildTreeFromFile(file, ColourType.BLACK);
+    }
+
+    private void compareTrees(List<Element> firstTree, List<Element> secondTree) {
+        if (CollectionUtils.isEmpty(firstTree) && CollectionUtils.isEmpty(secondTree)) {
+            return;
         }
-        IB1 firstIb1XMLModel = parseXMLFile(firstFileInputStream);
-        IB1 secondIb1XMLModel = parseXMLFile(secondFileInputStream);
-        Element firstTree;
-        Element secondTree;
-        try {
-            firstTree = buildTree(firstIb1XMLModel);
-            secondTree = buildTree(secondIb1XMLModel);
-        } catch (IllegalAccessException e) {
-            log.info("Could not build XML Tree");
-            e.printStackTrace();
-            throw new UnknownException("Could not build XML Tree");
+        for (Element fElement : firstTree) {
+            if (!ColourType.NONE.value.equals(fElement.getColor())) {
+                continue;
+            }
+            for (Element sElement : secondTree) {
+                if (!ColourType.NONE.value.equals(sElement.getColor())) {
+                    continue;
+                }
+                if (fElement.getName().equals(sElement.getName())) {
+                    if (haveEqualAttributes(fElement, sElement) && haveEqualValue(fElement.getValue(), sElement.getValue())) {
+                        fElement.setColor(ColourType.BLACK.value);
+                        sElement.setColor(ColourType.BLACK.value);
+                    } else {
+                        fElement.setColor(ColourType.ORANGE.value);
+                        sElement.setColor(ColourType.ORANGE.value);
+                    }
+                    compareTrees(fElement.getChildren(), sElement.getChildren());
+                    break;
+                }
+            }
         }
-        differ.setFirstTree(firstTree);
-        differ.setSecondTree(secondTree);
-        return differ;
+        setColorRecursively(secondTree, ColourType.RED);
+        setColorRecursively(firstTree, ColourType.GREEN);
+    }
+
+    private void setColorRecursively(List<Element> tree, ColourType colour) {
+        for (Element node : tree) {
+            if (ColourType.NONE.value.equals(node.getColor())) {
+                node.setColor(colour.value);
+            }
+            if (!CollectionUtils.isEmpty(node.getChildren())) {
+                setColorRecursively(node.getChildren(), colour);
+            }
+        }
+    }
+
+    private boolean haveEqualValue(String firstValue, String secondValue) {
+        if (firstValue == null && secondValue == null) {
+            return true;
+        }
+        return firstValue != null && firstValue.equals(secondValue);
+    }
+
+    private boolean haveEqualAttributes(Element firstElement, Element secondElement) {
+        if (CollectionUtils.isEmpty(firstElement.getAttributes()) && CollectionUtils.isEmpty(secondElement.getAttributes())) {
+            return true;
+        }
+        return new HashSet<>(firstElement.getAttributes()).equals(new HashSet<>(secondElement.getAttributes()));
     }
 
     @SuppressWarnings("unchecked")
     private IB1 parseXMLFile(InputStream xmlFile) {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
-            IB1 documentIB1 = ((JAXBElement<IB1>) jaxbContext.createUnmarshaller().unmarshal(xmlFile)).getValue();
-            return documentIB1;
+            return ((JAXBElement<IB1>) jaxbContext.createUnmarshaller().unmarshal(xmlFile)).getValue();
         } catch (JAXBException e) {
-            e.printStackTrace();
+            throw new UnknownException("Could not deserialize XML");
         }
-        return new IB1();
     }
 
-    @Override
-    public Element getTreeStructure(MultipartFile file) {
+    private Element buildTreeFromFile(MultipartFile file, ColourType colour) {
         InputStream fileInputStream;
         try {
             fileInputStream = file.getInputStream();
@@ -83,7 +125,7 @@ public class DifferServiceImpl implements DifferService {
         IB1 ib1XMLModel = parseXMLFile(fileInputStream);
         Element root;
         try {
-            root = buildTree(ib1XMLModel);
+            root = buildTree(ib1XMLModel, colour);
         } catch (IllegalAccessException e) {
             log.info("Could not build XML Tree");
             throw new UnknownException("Could not build XML Tree");
@@ -91,54 +133,76 @@ public class DifferServiceImpl implements DifferService {
         return root;
     }
 
-    private Element buildTree(Object object) throws IllegalAccessException {
+    private Element buildTree(Object object, ColourType colour) throws IllegalAccessException {
         Element element = new Element();
-        String name = object.getClass().getSimpleName();
         List<Element> children = new ArrayList<>();
         Class<?> clazz = object.getClass();
         List<Attribute> attributes = new ArrayList<>();
         List<Field> fields = new ArrayList<>(Arrays.asList(clazz.getDeclaredFields()));
         for (Field field : fields) {
             field.setAccessible(true);
+            boolean isXmlElement = hasAnnotation(field, XmlElement.class) || hasAnnotation(field, XmlElements.class);
             if (hasAnnotation(field, XmlAttribute.class) && field.get(object) != null) {
                 Attribute attribute = new Attribute();
                 attribute.setName(field.getName());
                 attribute.setValue(field.get(object).toString());
                 attributes.add(attribute);
-            }
-            if (hasAnnotation(field, XmlElement.class) && !isSimpleType(field.getType())) {
-                createIntermediateNode(children, object, field);
-            } else if (isSimpleType(field.getType())) {
-                createLeafNode(children, object, field);
+            } else if (isXmlElement && !isSimpleType(field.getType())) {
+                createIntermediateNode(children, object, field, colour);
+            } else if (isXmlElement && isSimpleType(field.getType())) {
+                createLeafNode(children, object, field, colour);
             }
         }
         element.setAttributes(attributes);
-        element.setColor(ColourType.BLACK.value);
-        element.setName(name);
+        element.setColor(colour.value);
+        element.setName(extractClassXMLName(object));
         element.setChildren(children);
         return element;
     }
 
-    private void createIntermediateNode(List<Element> children, Object object, Field field) throws IllegalAccessException {
+    private void createIntermediateNode(List<Element> children, Object object, Field field, ColourType colour) throws IllegalAccessException {
         if (field.get(object) != null && field.getType() != List.class) {
-            Element childElement = buildTree(field.get(object));
+            Element childElement = buildTree(field.get(object), colour);
             children.add(childElement);
         } else if (field.getType() == List.class && field.get(object) != null) {
             for (Object node : (ArrayList<?>) field.get(object)) {
-                Element childElement = buildTree(node);
+                Element childElement = createListNode(node, field, colour);
                 children.add(childElement);
             }
         }
     }
 
-    private void createLeafNode(List<Element> children, Object object, Field field) throws IllegalAccessException {
+    private Element createListNode(Object object, Field field, ColourType colour) throws IllegalAccessException {
+        Element childElement;
+        if (isSimpleType(object.getClass())) {
+            childElement = new Element();
+            childElement.setName(extractPropertyXMLName(field));
+            childElement.setColor(colour.value);
+            childElement.setValue(object.toString());
+        } else {
+            childElement = buildTree(object, colour);
+        }
+        return childElement;
+    }
+
+    private void createLeafNode(List<Element> children, Object object, Field field, ColourType colour) throws IllegalAccessException {
         if (field.get(object) != null) {
             Element leaf = new Element();
-            leaf.setName(field.getName());
-            leaf.setColor(ColourType.BLACK.value);
+            leaf.setName(extractPropertyXMLName(field));
+            leaf.setColor(colour.value);
             leaf.setValue(field.get(object).toString());
             children.add(leaf);
         }
+    }
+
+    private String extractPropertyXMLName(Field field) {
+        return hasAnnotation(field, XmlElement.class) ? field.getAnnotation(XmlElement.class).name()
+                : field.getName();
+    }
+
+    private String extractClassXMLName(Object object) {
+        return object.getClass().isAnnotationPresent(XmlType.class) ? object.getClass().getAnnotation(XmlType.class).name()
+                : object.getClass().getSimpleName();
     }
 
     private boolean isSimpleType(Object object) {
