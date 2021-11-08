@@ -19,6 +19,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
+import javax.xml.bind.annotation.XmlType;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
@@ -134,7 +135,6 @@ public class DifferServiceImpl implements DifferService {
 
     private Element buildTree(Object object, ColourType colour) throws IllegalAccessException {
         Element element = new Element();
-        String name = object.getClass().getSimpleName();
         List<Element> children = new ArrayList<>();
         Class<?> clazz = object.getClass();
         List<Attribute> attributes = new ArrayList<>();
@@ -155,7 +155,7 @@ public class DifferServiceImpl implements DifferService {
         }
         element.setAttributes(attributes);
         element.setColor(colour.value);
-        element.setName(name);
+        element.setName(extractClassXMLName(object));
         element.setChildren(children);
         return element;
     }
@@ -176,7 +176,7 @@ public class DifferServiceImpl implements DifferService {
         Element childElement;
         if (isSimpleType(object.getClass())) {
             childElement = new Element();
-            childElement.setName(field.getName());
+            childElement.setName(extractPropertyXMLName(field));
             childElement.setColor(colour.value);
             childElement.setValue(object.toString());
         } else {
@@ -188,11 +188,21 @@ public class DifferServiceImpl implements DifferService {
     private void createLeafNode(List<Element> children, Object object, Field field, ColourType colour) throws IllegalAccessException {
         if (field.get(object) != null) {
             Element leaf = new Element();
-            leaf.setName(field.getName());
+            leaf.setName(extractPropertyXMLName(field));
             leaf.setColor(colour.value);
             leaf.setValue(field.get(object).toString());
             children.add(leaf);
         }
+    }
+
+    private String extractPropertyXMLName(Field field) {
+        return hasAnnotation(field, XmlElement.class) ? field.getAnnotation(XmlElement.class).name()
+                : field.getName();
+    }
+
+    private String extractClassXMLName(Object object) {
+        return object.getClass().isAnnotationPresent(XmlType.class) ? object.getClass().getAnnotation(XmlType.class).name()
+                : object.getClass().getSimpleName();
     }
 
     private boolean isSimpleType(Object object) {
