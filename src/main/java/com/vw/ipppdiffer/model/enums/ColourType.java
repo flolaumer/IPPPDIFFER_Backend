@@ -5,7 +5,8 @@ public enum ColourType {
     BLACK("#000000"),
     RED("#DA0C1F"),
     ORANGE("#FF9B00"),
-    GREEN("#64A844");
+    GREEN("#64A844"),
+    NONE("#FFFFFF");
 
     public String value;
 
