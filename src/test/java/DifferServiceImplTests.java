@@ -1,6 +1,7 @@
 import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
 import com.vw.ipppdiffer.service.DifferServiceImpl;
+import com.vw.ipppdiffer.model.enums.ColourType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockMultipartFile;
@@ -33,7 +34,7 @@ class DifferServiceImplTests {
         Element element = service.getTreeStructure(firstFile);
         assertNotNull(element);
         assertEquals("IB-1", element.getName());
-        assertEquals("#000000", element.getColor());
+        assertEquals(ColourType.BLACK.value, element.getColor());
         assertEquals(7, element.getChildren().size());
         assertEquals(1, element.getAttributes().size());
     }
@@ -47,14 +48,12 @@ class DifferServiceImplTests {
         assertNotNull(firstTree);
         assertNotNull(secondTree);
         assertEquals("IB-1", firstTree.getName());
-        assertEquals("#FF9B00", firstTree.getColor());
+        assertEquals(ColourType.ORANGE.value, firstTree.getColor());
         assertEquals(7, firstTree.getChildren().size());
         assertEquals(1, firstTree.getAttributes().size());
         assertEquals("IB-1", secondTree.getName());
-        assertEquals("#FF9B00", secondTree.getColor());
+        assertEquals(ColourType.ORANGE.value, secondTree.getColor());
         assertEquals(7, secondTree.getChildren().size());
         assertEquals(1, secondTree.getAttributes().size());
-
-
     }
 }
