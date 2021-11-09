@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='ipb.xsl'?>
+<IB-1 xsi:noNamespaceSchemaLocation="IB-1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="uuid_2d61e6d2-03b2-42e2-b79c-354b818e7923" version="0.2">
+   <NAME>00FF_DemoEcu</NAME>
+   <RELEASE-DATE>2021-10-08</RELEASE-DATE>
+   <IBN-REQUIRED>true</IBN-REQUIRED>
+   <DOC-INFO>
+      <CONTACTS>
+         <CONTACT id="uuid_90c30746-a727-42a1-ab83-165594c531dc">
+            <NAME>Max Mustermann</NAME>
+            <USER-ID>abcdef</USER-ID>
+            <COMPANY>MyCompany</COMPANY>
+            <DIVISION>TE</DIVISION>
+            <DEPARTMENT>AB-C/D</DEPARTMENT>
+            <ROLE>Arbeiter</ROLE>
+            <MAIL>mm@web.de</MAIL>
+         </CONTACT>
+         <CONTACT id="uuid_47f0720c-50dc-4097-9f0a-dbe63b92f3c6">
+            <NAME>John Doe</NAME>
+            <USER-ID>123456</USER-ID>
+            <COMPANY>MyGroup</COMPANY>
+            <DIVISION>IT</DIVISION>
+            <DEPARTMENT>Changed Department</DEPARTMENT>
+            <ROLE>Worker</ROLE>
+            <MAIL>j_d@posteo.de</MAIL>
+         </CONTACT>
+         <CONTACT id="uuid_b6824223-1a7c-4f06-979b-cff3fa3ccde8">
+            <NAME>New Person</NAME>
+            <DIVISION>P</DIVISION>
+            <ROLE>Praktikant</ROLE>
+         </CONTACT>
+      </CONTACTS>
+      <DOC-REVISIONS>
+         <DOC-REVISION>
+            <VERSION>0_1</VERSION>
+            <DATE>08.10.2021</DATE>
+            <AUTHOR-REF ref="uuid_90c30746-a727-42a1-ab83-165594c531dc"/>
+            <CHANGE>Initialerstellung</CHANGE>
+            <TOOL>DWB_5_19_0</TOOL>
+         </DOC-REVISION>
+         <DOC-REVISION>
+            <VERSION>0_2</VERSION>
+            <DATE>12.10.2021</DATE>
+            <AUTHOR-REF ref="uuid_90c30746-a727-42a1-ab83-165594c531dc"/>
+            <CHANGE>Änderungen an statischen Knoten gemacht</CHANGE>
+            <TOOL>DWB_5_19_0</TOOL>
+         </DOC-REVISION>
+      </DOC-REVISIONS>
+   </DOC-INFO>
+   <IB-DESCRIPTION>
+      <IB-VARIANTS>
+         <IB-VARIANT id="uuid_4352eeff-ad1e-4bbb-bb58-abbc46bc119b">
+            <NAME>MyVariant1</NAME>
+            <PRODUCT-ID></PRODUCT-ID>
+            <DESC>Changed Description</DESC>
+         </IB-VARIANT>
+         <IB-VARIANT id="uuid_8d56901b-c63d-4083-a54f-379d5464db6c">
+            <NAME>MyVariant2</NAME>
+            <PRODUCT-ID>ABC</PRODUCT-ID>
+            <DESC>nur für A</DESC>
+         </IB-VARIANT>
+         <IB-VARIANT id="uuid_da2e471d-9a70-465b-b9c4-2102666d604d">
+            <NAME>New Variant</NAME>
+            <PRODUCT-ID>XYZ</PRODUCT-ID>
+         </IB-VARIANT>
+      </IB-VARIANTS>
+      <VALIDITIES-REF>IB1_00FF_DemoEcu_V0_2.tnr</VALIDITIES-REF>
+      <OBJECTIVES>
+         <OBJECTIVE>Dies ist eine fiktive IB1, die zu Demo- und Testzwecken genutzt werden kann.</OBJECTIVE>
+         <OBJECTIVE>Beispielsweise kann diese IB1 für einen Demo-Sprint verwendet werden. Hier wurde ein Change gemacht.</OBJECTIVE>
+         <OBJECTIVE>New Objective</OBJECTIVE>
+      </OBJECTIVES>
+      <IBNZ>
+         <IBNZ-ESTIMATION>55.0</IBNZ-ESTIMATION>
+         <IBNZ-COMMITMENT>58.0</IBNZ-COMMITMENT>
+         <REASON>New Reason</REASON>
+      </IBNZ>
+      <SLAVES>
+         <SLAVE id="uuid_28028bbb-e5fa-43a2-b2de-4e93f2f95d85">
+            <NAME>Licht</NAME>
+            <ECU-ID>603</ECU-ID>
+         </SLAVE>
+         <SLAVE id="uuid_92765029-4b08-4639-94cd-ebb35fdd2900">
+            <NAME>Sicht</NAME>
+            <ECU-ID>650</ECU-ID>
+         </SLAVE>
+         <SLAVE id="uuid_0d13a068-9445-4160-9f86-728b6c707cbd">
+            <NAME>New Component</NAME>
+            <ECU-ID>0815</ECU-ID>
+         </SLAVE>
+      </SLAVES>
+   </IB-DESCRIPTION>
+   <ENVIRONMENT>
+      <PRE-CONDITIONS>
+         <PRE-CONDITION id="uuid_a9317af8-f860-4d2e-9869-26d375a7568b" pRelevant="true" kdRelevant="true">Stecker steckt</PRE-CONDITION>
+         <PRE-CONDITION id="uuid_5b049dc9-98d1-446c-9c1e-802854b6a94c" pRelevant="true" kdRelevant="false">Roboter läuft</PRE-CONDITION>
+      </PRE-CONDITIONS>
+      <DEPENDENCIES>
+         <DEPENDENCY>Nicht ausschalten</DEPENDENCY>
+      </DEPENDENCIES>
+      <ACCESS-AUTHORISATIONS>
+         <ACCESS-AUTHORISATION id="uuid_297a372d-b0f9-4e94-9a08-4ca13f091e8d">
+            <NAME>Zwei-Faktor-Authentifizierung</NAME>
+            <DESC>Mit PKI-Karte und PIN</DESC>
+         </ACCESS-AUTHORISATION>
+      </ACCESS-AUTHORISATIONS>
+      <PRODUCTION-MODES>
+         <PRODUCTION-MODE id="uuid_a396d167-f35e-4e42-af6c-5fdb95de0aaf">
+            <NAME>MyPMode</NAME>
+            <BYTES>
+               <BYTE-0>xxxxx1xx</BYTE-0>
+               <BYTE-1>0xxxxxxx</BYTE-1>
+               <BYTE-2>xxx1xxxx</BYTE-2>
+            </BYTES>
+         </PRODUCTION-MODE>
+         <PRODUCTION-MODE id="uuid_deaed096-d221-4050-bbe5-b264bbcc48c4">
+            <NAME>ChangedPMode</NAME>
+            <BYTES>
+               <BYTE-0>x0xx1xxx</BYTE-0>
+               <BYTE-1>xxxxx1xx</BYTE-1>
+               <BYTE-2>xx11xxxx</BYTE-2>
+            </BYTES>
+         </PRODUCTION-MODE>
+         <PRODUCTION-MODE id="uuid_a64d87e3-7833-4275-afb5-ad89b1cbd6a0">
+            <NAME>New P-Mode</NAME>
+            <BYTES>
+               <BYTE-0>1xxxxxxx</BYTE-0>
+               <BYTE-1>xxxxxxxx</BYTE-1>
+               <BYTE-2>xxxxxxxx</BYTE-2>
+            </BYTES>
+         </PRODUCTION-MODE>
+      </PRODUCTION-MODES>
+      <TRANSPORT-MODE>Grün leuchten</TRANSPORT-MODE>
+   </ENVIRONMENT>
+   <PROCEDURES>
+      <PROCEDURE id="uuid_cb6f3623-ad64-454d-b3af-7028553334e4">
+         <NAME>Proc1</NAME>
+         <BLOCK id="uuid_babf7c36-1436-4046-ad01-72c147f805d5" standardIBNB="false" P-relevant="true" KD-relevant="true" optional="false">
+            <NAME>MyBlockA</NAME>
+            <LOGICAL-LINK>MyLink</LOGICAL-LINK>
+            <STEPS>
+               <STEP id="uuid_63061e9e-907d-43de-baec-7f586e1e7b5b" cyclic="false">
+                  <NAME>MyStepI</NAME>
+                  <DESC>This is a good description.</DESC>
+                  <DIAG-SERVICE>
+                     <SERVICE-IDENTIFIER>09</SERVICE-IDENTIFIER>
+                     <LONG-NAME>Hallo Welt</LONG-NAME>
+                     <SHORT-NAME>HalWel</SHORT-NAME>
+                  </DIAG-SERVICE>
+                  <DIAG-PARAMETERS>
+                     <DATA-IDENTIFIER>1234</DATA-IDENTIFIER>
+                     <DIAG-PARAMETER>
+                        <LONG-NAME>My Parameter Name</LONG-NAME>
+                        <SHORT-NAME>MyParNam</SHORT-NAME>
+                        <MESSAGE-TYPE>REQUEST</MESSAGE-TYPE>
+                        <PATH>stamm.ast.zweig.blatt</PATH>
+                        <VALUE-PROXY>
+                           <VALUE>42</VALUE>
+                        </VALUE-PROXY>
+                     </DIAG-PARAMETER>
+                     <DIAG-PARAMETER>
+                        <LONG-NAME>Your Parameter</LONG-NAME>
+                        <SHORT-NAME>YouPar</SHORT-NAME>
+                        <MESSAGE-TYPE>REQUEST</MESSAGE-TYPE>
+                        <PATH>himmel.hoelle</PATH>
+                        <VALUE-PROXY>
+                           <VALUE>666</VALUE>
+                        </VALUE-PROXY>
+                     </DIAG-PARAMETER>
+                  </DIAG-PARAMETERS>
+               </STEP>
+               <STEP id="uuid_737c81c5-b2e5-4d78-8ed6-9f874f498326" cyclic="false">
+                  <NAME>MyStepII</NAME>
+                  <DESC>Without Diags</DESC>
+               </STEP>
+            </STEPS>
+         </BLOCK>
+         <BLOCK id="uuid_fc745d3e-1933-4cb9-88a5-d5242019549c" standardIBNB="false" P-relevant="true" KD-relevant="true" optional="false">
+            <NAME>OtherBlock</NAME>
+            <STEPS>
+               <STEP id="uuid_aefe08c4-c233-447c-8a95-e3dd1c5e16e3" cyclic="false">
+                  <NAME>OtherStep</NAME>
+                  <DESC>So called IBNS.</DESC>
+               </STEP>
+            </STEPS>
+         </BLOCK>
+      </PROCEDURE>
+      <PROCEDURE id="uuid_94b8803e-f9c0-45ad-8b3f-5747a5123413">
+         <NAME>Proc2</NAME>
+      </PROCEDURE>
+   </PROCEDURES>
+   <REFERENCES>
+      <REGULATIONS>
+         <REGULATION>
+            <NAME>MyRegulation</NAME>
+            <VERSION>1.2</VERSION>
+            <DESC>Version geändert</DESC>
+            <FILE-SYSTEM>Cloud</FILE-SYSTEM>
+         </REGULATION>
+         <REGULATION>
+            <NAME>NewRegulation</NAME>
+         </REGULATION>
+      </REGULATIONS>
+      <RELATED-DOCUMENTS/>
+   </REFERENCES>
+</IB-1>
