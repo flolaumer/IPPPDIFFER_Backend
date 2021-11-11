@@ -25,10 +25,7 @@ import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Collections.singletonList;
@@ -59,25 +56,49 @@ public class DifferServiceImpl implements DifferService {
             if (!ColourType.NONE.value.equals(fElement.getColor())) {
                 continue;
             }
-            for (Element sElement : secondTree) {
-                if (!ColourType.NONE.value.equals(sElement.getColor())) {
-                    continue;
-                }
-                if (fElement.getName().equals(sElement.getName())) {
-                    if (haveEqualAttributes(fElement, sElement) && haveEqualValue(fElement.getValue(), sElement.getValue())) {
-                        fElement.setColor(ColourType.BLACK.value);
-                        sElement.setColor(ColourType.BLACK.value);
-                    } else {
-                        fElement.setColor(ColourType.ORANGE.value);
-                        sElement.setColor(ColourType.ORANGE.value);
-                    }
-                    compareTrees(fElement.getChildren(), sElement.getChildren());
-                    break;
-                }
-            }
+            int indexOfFirstNode = firstTree.indexOf(fElement);
+            visitBasedOnAttributes(secondTree, fElement, indexOfFirstNode);
+            visitBasedOnPosition(secondTree, fElement);
         }
         setColorRecursively(secondTree, ColourType.RED);
         setColorRecursively(firstTree, ColourType.GREEN);
+    }
+
+    private void visitBasedOnPosition(List<Element> secondTree, Element fElement) {
+        for (Element sElement : secondTree) {
+            if (!ColourType.NONE.value.equals(sElement.getColor())) {
+                continue;
+            }
+            if (fElement.getName().equals(sElement.getName())) {
+                if (haveEqualAttributes(fElement, sElement, true) && haveEqualValue(fElement.getValue(), sElement.getValue())) {
+                    fElement.setColor(ColourType.BLACK.value);
+                    sElement.setColor(ColourType.BLACK.value);
+                } else {
+                    fElement.setColor(ColourType.ORANGE.value);
+                    sElement.setColor(ColourType.ORANGE.value);
+                }
+                compareTrees(fElement.getChildren(), sElement.getChildren());
+                break;
+            }
+        }
+    }
+
+    private void visitBasedOnAttributes(List<Element> secondTree, Element fElement, int indexOfFirstNode) {
+        for (Element sElement : secondTree) {
+            if (!ColourType.NONE.value.equals(sElement.getColor())) {
+                continue;
+            }
+            int indexOfSecondNode = secondTree.indexOf(sElement);
+            if (fElement.getName().equals(sElement.getName())
+                    && haveEqualAttributes(fElement, sElement, false)
+                    && haveEqualValue(fElement.getValue(), sElement.getValue())
+                    && indexOfFirstNode != indexOfSecondNode) {
+                fElement.setColor(ColourType.ORANGE.value);
+                sElement.setColor(ColourType.ORANGE.value);
+                compareTrees(fElement.getChildren(), sElement.getChildren());
+                break;
+            }
+        }
     }
 
     private void setColorRecursively(List<Element> tree, ColourType colour) {
@@ -98,9 +119,9 @@ public class DifferServiceImpl implements DifferService {
         return firstValue != null && firstValue.equals(secondValue);
     }
 
-    private boolean haveEqualAttributes(Element firstElement, Element secondElement) {
+    private boolean haveEqualAttributes(Element firstElement, Element secondElement, boolean nullable) {
         if (CollectionUtils.isEmpty(firstElement.getAttributes()) && CollectionUtils.isEmpty(secondElement.getAttributes())) {
-            return true;
+            return nullable;
         }
         return new HashSet<>(firstElement.getAttributes()).equals(new HashSet<>(secondElement.getAttributes()));
     }
@@ -138,7 +159,7 @@ public class DifferServiceImpl implements DifferService {
         List<Element> children = new ArrayList<>();
         Class<?> clazz = object.getClass();
         List<Attribute> attributes = new ArrayList<>();
-        List<Field> fields = new ArrayList<>(Arrays.asList(clazz.getDeclaredFields()));
+        List<Field> fields = getAllInheritedFields(clazz);
         for (Field field : fields) {
             field.setAccessible(true);
             boolean isXmlElement = hasAnnotation(field, XmlElement.class) || hasAnnotation(field, XmlElements.class);
@@ -218,6 +239,16 @@ public class DifferServiceImpl implements DifferService {
                 .map(Annotation::annotationType)
                 .collect(Collectors.toList());
         return annotationTypes.contains(annotation);
+    }
+
+    private List<Field> getAllInheritedFields(Class<?> clazz) {
+        List<Field> result = new ArrayList<>();
+        Class<?> classTree = clazz;
+        while (classTree != null && classTree != Object.class && !classTree.isEnum()) {
+            Collections.addAll(result, classTree.getDeclaredFields());
+            classTree = classTree.getSuperclass();
+        }
+        return result;
     }
 
 }

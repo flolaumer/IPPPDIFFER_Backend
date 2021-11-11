@@ -8,6 +8,8 @@
 
 package com.vw.ipppdiffer.model.xml;
 
+import lombok.ToString;
+
 import javax.xml.bind.annotation.*;
 
 
@@ -38,6 +40,7 @@ import javax.xml.bind.annotation.*;
  * 
  * 
  */
+@ToString
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CONTACT", propOrder = {
     "userid",
