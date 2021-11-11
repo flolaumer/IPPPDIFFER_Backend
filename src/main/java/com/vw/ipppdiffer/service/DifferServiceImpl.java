@@ -7,10 +7,10 @@ import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
 import com.vw.ipppdiffer.model.xml.IB1;
 import com.vw.ipppdiffer.model.xml.ObjectFactory;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.xml.bind.JAXBContext;
@@ -25,105 +25,32 @@ import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.Collections.singletonList;
 
 @Slf4j
 @Service
-@NoArgsConstructor
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class DifferServiceImpl implements DifferService {
+
+    private final DifferComponent differComponent;
 
     @Override
     public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) {
         Element firstTree = buildTreeFromFile(firstFile, ColourType.NONE);
         Element secondTree = buildTreeFromFile(secondFile, ColourType.NONE);
-        compareTrees(singletonList(firstTree), singletonList(secondTree));
+        differComponent.compareTrees(singletonList(firstTree), singletonList(secondTree));
         return new DifferResponse(firstTree, secondTree);
     }
 
     @Override
     public Element getTreeStructure(MultipartFile file) {
         return buildTreeFromFile(file, ColourType.BLACK);
-    }
-
-    private void compareTrees(List<Element> firstTree, List<Element> secondTree) {
-        if (CollectionUtils.isEmpty(firstTree) && CollectionUtils.isEmpty(secondTree)) {
-            return;
-        }
-        for (Element fElement : firstTree) {
-            if (!ColourType.NONE.value.equals(fElement.getColor())) {
-                continue;
-            }
-            int indexOfFirstNode = firstTree.indexOf(fElement);
-            visitBasedOnAttributes(secondTree, fElement, indexOfFirstNode);
-            visitBasedOnPosition(secondTree, fElement);
-        }
-        setColorRecursively(secondTree, ColourType.RED);
-        setColorRecursively(firstTree, ColourType.GREEN);
-    }
-
-    private void visitBasedOnPosition(List<Element> secondTree, Element fElement) {
-        for (Element sElement : secondTree) {
-            if (!ColourType.NONE.value.equals(sElement.getColor())) {
-                continue;
-            }
-            if (fElement.getName().equals(sElement.getName())) {
-                if (haveEqualAttributes(fElement, sElement, true) && haveEqualValue(fElement.getValue(), sElement.getValue())) {
-                    fElement.setColor(ColourType.BLACK.value);
-                    sElement.setColor(ColourType.BLACK.value);
-                } else {
-                    fElement.setColor(ColourType.ORANGE.value);
-                    sElement.setColor(ColourType.ORANGE.value);
-                }
-                compareTrees(fElement.getChildren(), sElement.getChildren());
-                break;
-            }
-        }
-    }
-
-    private void visitBasedOnAttributes(List<Element> secondTree, Element fElement, int indexOfFirstNode) {
-        for (Element sElement : secondTree) {
-            if (!ColourType.NONE.value.equals(sElement.getColor())) {
-                continue;
-            }
-            int indexOfSecondNode = secondTree.indexOf(sElement);
-            if (fElement.getName().equals(sElement.getName())
-                    && haveEqualAttributes(fElement, sElement, false)
-                    && haveEqualValue(fElement.getValue(), sElement.getValue())
-                    && indexOfFirstNode != indexOfSecondNode) {
-                fElement.setColor(ColourType.ORANGE.value);
-                sElement.setColor(ColourType.ORANGE.value);
-                compareTrees(fElement.getChildren(), sElement.getChildren());
-                break;
-            }
-        }
-    }
-
-    private void setColorRecursively(List<Element> tree, ColourType colour) {
-        for (Element node : tree) {
-            if (ColourType.NONE.value.equals(node.getColor())) {
-                node.setColor(colour.value);
-            }
-            if (!CollectionUtils.isEmpty(node.getChildren())) {
-                setColorRecursively(node.getChildren(), colour);
-            }
-        }
-    }
-
-    private boolean haveEqualValue(String firstValue, String secondValue) {
-        if (firstValue == null && secondValue == null) {
-            return true;
-        }
-        return firstValue != null && firstValue.equals(secondValue);
-    }
-
-    private boolean haveEqualAttributes(Element firstElement, Element secondElement, boolean nullable) {
-        if (CollectionUtils.isEmpty(firstElement.getAttributes()) && CollectionUtils.isEmpty(secondElement.getAttributes())) {
-            return nullable;
-        }
-        return new HashSet<>(firstElement.getAttributes()).equals(new HashSet<>(secondElement.getAttributes()));
     }
 
     @SuppressWarnings("unchecked")
