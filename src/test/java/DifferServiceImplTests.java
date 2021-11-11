@@ -1,5 +1,6 @@
 import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
+import com.vw.ipppdiffer.service.DifferComponent;
 import com.vw.ipppdiffer.service.DifferServiceImpl;
 import com.vw.ipppdiffer.model.enums.ColourType;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +21,7 @@ class DifferServiceImplTests {
 
     @BeforeEach
     public void setup() throws IOException {
-        service = new DifferServiceImpl();
+        service = new DifferServiceImpl(new DifferComponent());
         firstFile = new MockMultipartFile(FIRST_FILE, FIRST_FILE, "text/xml",
                 this.getClass().getClassLoader()
                         .getResourceAsStream(FIRST_FILE));
@@ -35,8 +36,8 @@ class DifferServiceImplTests {
         assertNotNull(element);
         assertEquals("IB-1", element.getName());
         assertEquals(ColourType.BLACK.value, element.getColor());
-        assertEquals(7, element.getChildren().size());
-        assertEquals(1, element.getAttributes().size());
+        assertEquals(8, element.getChildren().size());
+        assertEquals(2, element.getAttributes().size());
     }
 
     @Test
@@ -49,11 +50,11 @@ class DifferServiceImplTests {
         assertNotNull(secondTree);
         assertEquals("IB-1", firstTree.getName());
         assertEquals(ColourType.ORANGE.value, firstTree.getColor());
-        assertEquals(7, firstTree.getChildren().size());
-        assertEquals(1, firstTree.getAttributes().size());
+        assertEquals(8, firstTree.getChildren().size());
+        assertEquals(2, firstTree.getAttributes().size());
         assertEquals("IB-1", secondTree.getName());
         assertEquals(ColourType.ORANGE.value, secondTree.getColor());
-        assertEquals(7, secondTree.getChildren().size());
-        assertEquals(1, secondTree.getAttributes().size());
+        assertEquals(8, secondTree.getChildren().size());
+        assertEquals(2, secondTree.getAttributes().size());
     }
 }
