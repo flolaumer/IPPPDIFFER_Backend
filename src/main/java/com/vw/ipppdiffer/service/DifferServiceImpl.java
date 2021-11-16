@@ -1,6 +1,6 @@
 package com.vw.ipppdiffer.service;
 
-import com.vw.ipppdiffer.exception.UnknownException;
+import com.vw.ipppdiffer.exception.DifferParseException;
 import com.vw.ipppdiffer.model.enums.ColourType;
 import com.vw.ipppdiffer.model.response.Attribute;
 import com.vw.ipppdiffer.model.response.DifferResponse;
@@ -41,7 +41,7 @@ public class DifferServiceImpl implements DifferService {
     private final DifferComponent differComponent;
 
     @Override
-    public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) {
+    public DifferResponse getDiffer(MultipartFile firstFile, MultipartFile secondFile) throws DifferParseException {
         Element firstTree = buildTreeFromFile(firstFile, ColourType.NONE);
         Element secondTree = buildTreeFromFile(secondFile, ColourType.NONE);
         differComponent.compareTrees(singletonList(firstTree), singletonList(secondTree));
@@ -49,26 +49,26 @@ public class DifferServiceImpl implements DifferService {
     }
 
     @Override
-    public Element getTreeStructure(MultipartFile file) {
+    public Element getTreeStructure(MultipartFile file) throws DifferParseException {
         return buildTreeFromFile(file, ColourType.BLACK);
     }
 
     @SuppressWarnings("unchecked")
-    private IB1 parseXMLFile(InputStream xmlFile) {
+    private IB1 parseXMLFile(InputStream xmlFile) throws DifferParseException {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
             return ((JAXBElement<IB1>) jaxbContext.createUnmarshaller().unmarshal(xmlFile)).getValue();
         } catch (JAXBException e) {
-            throw new UnknownException("Could not deserialize XML");
+            throw new DifferParseException("Could not deserialize XML");
         }
     }
 
-    private Element buildTreeFromFile(MultipartFile file, ColourType colour) {
+    private Element buildTreeFromFile(MultipartFile file, ColourType colour) throws DifferParseException {
         InputStream fileInputStream;
         try {
             fileInputStream = file.getInputStream();
         } catch (IOException e) {
-            throw new UnknownException("Could not read xml file");
+            throw new DifferParseException("Could not read xml file");
         }
         IB1 ib1XMLModel = parseXMLFile(fileInputStream);
         Element root;
@@ -76,7 +76,7 @@ public class DifferServiceImpl implements DifferService {
             root = buildTree(ib1XMLModel, colour);
         } catch (IllegalAccessException e) {
             log.info("Could not build XML Tree");
-            throw new UnknownException("Could not build XML Tree");
+            throw new DifferParseException("Could not build XML Tree");
         }
         return root;
     }

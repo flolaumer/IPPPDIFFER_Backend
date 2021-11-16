@@ -1,8 +1,9 @@
+import com.vw.ipppdiffer.exception.DifferParseException;
+import com.vw.ipppdiffer.model.enums.ColourType;
 import com.vw.ipppdiffer.model.response.DifferResponse;
 import com.vw.ipppdiffer.model.response.Element;
 import com.vw.ipppdiffer.service.DifferComponent;
 import com.vw.ipppdiffer.service.DifferServiceImpl;
-import com.vw.ipppdiffer.model.enums.ColourType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockMultipartFile;
@@ -31,7 +32,7 @@ class DifferServiceImplTests {
     }
 
     @Test
-    void parseValidTree() {
+    void parseValidTree() throws DifferParseException {
         Element element = service.getTreeStructure(firstFile);
         assertNotNull(element);
         assertEquals("IB-1", element.getName());
@@ -41,7 +42,7 @@ class DifferServiceImplTests {
     }
 
     @Test
-    void canGetValidDiffer() {
+    void canGetValidDiffer() throws DifferParseException {
         DifferResponse getDiffer = service.getDiffer(firstFile, secondFile);
         Element firstTree = getDiffer.getFirstTree();
         Element secondTree = getDiffer.getSecondTree();
